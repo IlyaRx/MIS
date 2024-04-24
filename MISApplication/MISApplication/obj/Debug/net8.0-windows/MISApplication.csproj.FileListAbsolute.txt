@@ -39,5 +39,4 @@ C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\
 C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\ref\MISApplication.dll
 C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Windows\LogIn\MainWindow.baml
 C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Windows\LogIn\MainWindow.g.cs
-C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\Colors.baml
-C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\Text.baml
+C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\DictionaryStyle.baml

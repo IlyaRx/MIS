@@ -7,10 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Styles\Colors.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Styles\Text.xaml">
+    <Page Update="Styles\DictionaryStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\LogIn\MainWindow.xaml">

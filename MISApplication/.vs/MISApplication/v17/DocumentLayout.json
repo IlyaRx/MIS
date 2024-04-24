@@ -1,0 +1,110 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F2534056-F402-4A3C-9290-1A17A3521213}|MISApplication\\MISApplication.csproj|c:\\users\\ilyac\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\misapplication\\misapplication\\misapplication\\windows\\login\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F2534056-F402-4A3C-9290-1A17A3521213}|MISApplication\\MISApplication.csproj|solutionrelative:misapplication\\windows\\login\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2534056-F402-4A3C-9290-1A17A3521213}|MISApplication\\MISApplication.csproj|c:\\users\\ilyac\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\misapplication\\misapplication\\misapplication\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F2534056-F402-4A3C-9290-1A17A3521213}|MISApplication\\MISApplication.csproj|solutionrelative:misapplication\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2534056-F402-4A3C-9290-1A17A3521213}|MISApplication\\MISApplication.csproj|c:\\users\\ilyac\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\misapplication\\misapplication\\misapplication\\windows\\login\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2534056-F402-4A3C-9290-1A17A3521213}|MISApplication\\MISApplication.csproj|solutionrelative:misapplication\\windows\\login\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\obj\\Debug\\net8.0-windows\\Windows\\LogIn\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MISApplication\\obj\\Debug\\net8.0-windows\\Windows\\LogIn\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2534056-F402-4A3C-9290-1A17A3521213}|MISApplication\\MISApplication.csproj|c:\\users\\ilyac\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\github\\misapplication\\misapplication\\misapplication\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F2534056-F402-4A3C-9290-1A17A3521213}|MISApplication\\MISApplication.csproj|solutionrelative:misapplication\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 164,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 64,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Colors.xaml",
+              "DocumentMoniker": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\Styles\\Colors.xaml",
+              "RelativeDocumentMoniker": "MISApplication\\Styles\\Colors.xaml",
+              "ToolTip": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\Styles\\Colors.xaml",
+              "RelativeToolTip": "MISApplication\\Styles\\Colors.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T13:58:16.144Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 336,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\App.xaml",
+              "RelativeDocumentMoniker": "MISApplication\\App.xaml",
+              "ToolTip": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\App.xaml",
+              "RelativeToolTip": "MISApplication\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T16:01:09.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.g.cs",
+              "DocumentMoniker": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\obj\\Debug\\net8.0-windows\\Windows\\LogIn\\MainWindow.g.cs",
+              "RelativeDocumentMoniker": "MISApplication\\obj\\Debug\\net8.0-windows\\Windows\\LogIn\\MainWindow.g.cs",
+              "ToolTip": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\obj\\Debug\\net8.0-windows\\Windows\\LogIn\\MainWindow.g.cs",
+              "RelativeToolTip": "MISApplication\\obj\\Debug\\net8.0-windows\\Windows\\LogIn\\MainWindow.g.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T15:18:02.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\Windows\\LogIn\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MISApplication\\Windows\\LogIn\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\Windows\\LogIn\\MainWindow.xaml*",
+              "RelativeToolTip": "MISApplication\\Windows\\LogIn\\MainWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-23T13:57:20.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\Windows\\LogIn\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MISApplication\\Windows\\LogIn\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ilyac\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\GitHub\\MISApplication\\MISApplication\\MISApplication\\Windows\\LogIn\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MISApplication\\Windows\\LogIn\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T13:19:33.27Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
