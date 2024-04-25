@@ -3,7 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         WindowState="Maximized"
         WindowStyle="None"
-        Height="1024" Width="1440">
+        Height="1024" Width="1440" 
+        MinWidth="477" MinHeight="484"
+        >
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -183,14 +185,42 @@
                                          Margin="0 61 0 0"
                                          PasswordChanged="PasswordBox_PasswordChanged"/>
                         </Grid>
-                        <Button Content="Вход"
+                        <Button Style="{DynamicResource butForm}" 
+                                Width="301" 
+                                Height="56"
+                                Content="Вход"
                                 Margin="0 48 0 0"/>
-                        <Label Content="Забыли пароль"
+                        <Button Content="Забыли пароль"
                                Margin="0 7 0 0"
-                               HorizontalAlignment="Center"
-                               FontFamily="Calibri"
-                               FontSize="12"
-                               Foreground="{StaticResource green-greyDark}"/>
+                               HorizontalAlignment="Center">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="FontFamily" Value="Calibri"/>
+                                    <Setter Property="FontSize" Value="15"/>
+                                    <Setter Property="Foreground" Value="{StaticResource green-greyDark}"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="border">
+                                                    <Label x:Name="leb"
+                                                           Content="{TemplateBinding Content}"
+                                                           FontFamily="{TemplateBinding FontFamily}"
+                                                           FontSize="{TemplateBinding FontSize}"
+                                                           Foreground="{TemplateBinding Foreground}"/>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="leb" Property="Foreground" Value="{StaticResource greenDark}"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </StackPanel>
                 </Border>
             </Grid>

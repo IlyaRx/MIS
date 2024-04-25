@@ -61,6 +61,7 @@ namespace MISApplication
             if (e.ChangedButton == MouseButton.Left)
                 DragMove();
             
+            
         }
     }
 }

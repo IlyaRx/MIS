@@ -7,10 +7,18 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Windows\WindowRegistr.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Styles\DictionaryStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\LogIn\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\WindowRegistr.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
