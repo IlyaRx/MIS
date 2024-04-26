@@ -1,0 +1,181 @@
+﻿<Window x:Class="MISApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MISApplication"
+        WindowState="Maximized" WindowStyle="None" 
+        Height="1024" Width="1440" 
+        MinWidth="477" MinHeight="484">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Главный конткнт-->
+        <Border Background="{StaticResource fonGreen}"
+                Grid.Row="1">
+            <Grid>
+                <!--Фон-->
+                <Canvas>
+                    <Ellipse Canvas.Left="-64" 
+                             Canvas.Top="-14"
+                             Width="328" 
+                             Height="328" 
+                             Stroke="{StaticResource greenLight}"
+                             StrokeThickness ="40"
+                             Panel.ZIndex="0"/>
+                    
+                    <Ellipse Canvas.Left="427" 
+                             Canvas.Top="197" 
+                             Width="293" 
+                             Height="293" 
+                             Fill="{StaticResource green-greyDark}"/>
+                    
+                    <Ellipse Canvas.Left="-64" 
+                             Canvas.Top="593" 
+                             Width="479" 
+                             Height="479" 
+                             Fill="{StaticResource greenLight}" />
+                    
+                    <Ellipse Canvas.Left="836" 
+                            Canvas.Top="427"
+                            Width="259" 
+                            Height="259" 
+                            Stroke="{StaticResource greenLight}"
+                            StrokeThickness ="40"
+                            Panel.ZIndex="0" />
+                    
+                    <Ellipse Canvas.Left="1045" 
+                            Canvas.Top="-72"
+                            Width="445" 
+                            Height="444" 
+                            Stroke="{StaticResource green-greyDark}"
+                            StrokeThickness ="40"
+                            Panel.ZIndex="0"/>
+                    
+                    <Ellipse Canvas.Left="792" 
+                            Canvas.Top="777" 
+                            Width="506" 
+                            Height="508" 
+                            Fill="{StaticResource green-greyDark}" />
+                    
+                    <Ellipse Canvas.Left="836" 
+                            Canvas.Top="427"
+                            Width="259" 
+                            Height="259" 
+                            Stroke="{StaticResource greenLight}"
+                            StrokeThickness ="40"
+                            Panel.ZIndex="0"  />
+                    
+                    <Ellipse Canvas.Left="1556" 
+                            Canvas.Top="777"
+                            Width="491" 
+                            Height="491" 
+                            Stroke="{StaticResource greenLight}"
+                            StrokeThickness ="40"
+                            Panel.ZIndex="0" />
+                    
+                    <Ellipse Canvas.Left="1877" 
+                            Canvas.Top="-28" 
+                            Width="398" 
+                            Height="400" 
+                            Fill="{StaticResource green-greyDark}"  />
+                    
+                    <Ellipse Canvas.Left="-64" 
+                            Canvas.Top="593" 
+                            Width="479" 
+                            Height="479" 
+                            Fill="{StaticResource greenLight}" />
+                    
+                    <Ellipse Canvas.Left="1450" 
+                            Canvas.Top="372" 
+                            Width="352" 
+                            Height="352" 
+                            Fill="{StaticResource greenLight}" />
+                    
+                </Canvas>
+
+                <!--Форма-->
+                <Border Background="{StaticResource beigeLight}"
+                        Width="433"
+                        Height="394"
+                        CornerRadius="43"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                    <Border.Effect>
+                        <DropShadowEffect Direction="315"
+                                          BlurRadius="4"
+                                          Opacity="0.5"/>
+                    </Border.Effect>
+                    <StackPanel>
+                        <Label Content="Вход"
+                               HorizontalAlignment="Center"
+                               Margin="0 32 0 0"
+                               FontFamily="Calibri"
+                               FontSize="36"
+                               FontWeight="Bold"
+                               Foreground="{StaticResource greenDark}" />
+                        <TextBox Style="{StaticResource tBoxLogin}"
+                                 Width="319"
+                                 Tag="Логин"
+                                 Margin="0 30 0 0"/>
+                        <Grid >
+                            <Label x:Name="labpass"
+                                   Content="Пароль"
+                                   Foreground="#BBBBBB"
+                                   Padding="5 0 0 2"
+                                   FontSize="20" Margin="57,61,57,0"/>
+                            <PasswordBox x:Name="pass"
+                                         Style="{StaticResource pBoxLogin}"
+                                         Width="319"
+                                         Tag="Пароль"
+                                         Margin="0 61 0 0"
+                                         PasswordChanged="PasswordBox_PasswordChanged"/>
+                        </Grid>
+                        <Button Style="{DynamicResource butForm}" 
+                                Width="301" Height="56"
+                                Content="Вход"
+                                Margin="0 48 0 0"
+                                Click="Вход_Click"/>
+                        <Button Content="Забыли пароль"
+                               Margin="0 7 0 0"
+                               HorizontalAlignment="Center">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderThickness" Value="0"/>
+                                    <Setter Property="FontFamily" Value="Calibri"/>
+                                    <Setter Property="FontSize" Value="15"/>
+                                    <Setter Property="Foreground" Value="{StaticResource green-greyDark}"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="border">
+                                                    <Label x:Name="leb"
+                                                           Content="{TemplateBinding Content}"
+                                                           FontFamily="{TemplateBinding FontFamily}"
+                                                           FontSize="{TemplateBinding FontSize}"
+                                                           Foreground="{TemplateBinding Foreground}"/>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="leb" Property="Foreground" Value="{StaticResource greenDark}"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+        
+        <!--Шапка-->
+        <local:Hed Grid.Row="0"/>
+    </Grid>
+</Window>
+   

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ilyac\\OneDrive\\Документы\\GitHub\\MISApplication\\MISApplication\\MISApplication\\MISApplication.csproj",
+      "projectUniqueName": "C:\\Users\\ilyac\\Desktop\\Git\\MISApplication\\MISApplication\\MISApplication\\MISApplication.csproj",
       "projectName": "MISApplication",
-      "projectPath": "C:\\Users\\ilyac\\OneDrive\\Документы\\GitHub\\MISApplication\\MISApplication\\MISApplication\\MISApplication.csproj",
+      "projectPath": "C:\\Users\\ilyac\\Desktop\\Git\\MISApplication\\MISApplication\\MISApplication\\MISApplication.csproj",
       "packagesPath": "C:\\Users\\ilyac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ilyac\\OneDrive\\Документы\\GitHub\\MISApplication\\MISApplication\\MISApplication\\obj\\",
+      "outputPath": "C:\\Users\\ilyac\\Desktop\\Git\\MISApplication\\MISApplication\\MISApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ilyac\\AppData\\Roaming\\NuGet\\NuGet.Config",

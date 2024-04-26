@@ -7,18 +7,24 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Windows\WindowRegistr.xaml.cs">
+    <Compile Update="Styles\Templates\Hed.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\RegistrWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Styles\Templates\Hed.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Styles\DictionaryStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Windows\LogIn\MainWindow.xaml">
+    <Page Update="Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Windows\WindowRegistr.xaml">
+    <Page Update="Windows\RegistrWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
