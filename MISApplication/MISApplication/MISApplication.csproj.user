@@ -7,24 +7,45 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Styles\Templates\Hed.xaml.cs">
+    <Compile Update="View\Hed.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Windows\RegistrWindow.xaml.cs">
+    <Compile Update="View\RegistrWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ZapisPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Styles\Templates\Hed.xaml">
+    <Page Update="Styles\Button.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Color.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\ComboBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\RadioButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\TextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Hed.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\DictionaryStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Windows\MainWindow.xaml">
+    <Page Update="View\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Windows\RegistrWindow.xaml">
+    <Page Update="View\RegistrWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ZapisPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

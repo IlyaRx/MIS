@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="MISApplication.View.ZapisPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MISApplication.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="873" d:DesignWidth="1106"
+             Background="LightGray">
+    <Grid>
+        <TextBox Height="47" Margin="10 20 150 0"
+                 VerticalAlignment="Top"
+                 Tag="ФИО Пациента"
+                 Style="{StaticResource TextBoxPoisk}"/>
+        <Button Style="{StaticResource butForm}"
+                Content="Поиск"
+                Width="120" Height="44"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Margin="0 23 15 0"
+                />
+        <ComboBox Style="{DynamicResource ComoBoxPoisk}" 
+                  Height="50" 
+                  Width="200"
+                  Tag="Типы услуг"/>
+        </Grid>
+</UserControl>

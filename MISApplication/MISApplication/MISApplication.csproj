@@ -16,4 +16,8 @@
     <Resource Include="Resourse\ImageHader.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+
 </Project>
