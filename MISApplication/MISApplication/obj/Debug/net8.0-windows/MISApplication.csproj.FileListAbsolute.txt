@@ -50,8 +50,6 @@ C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debu
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\MISApplication.dll
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\refint\MISApplication.dll
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\MISApplication.pdb
-C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Windows\MainWindow.baml
-C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Windows\MainWindow.g.cs
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\bin\Debug\net8.0-windows\MISApplication.exe
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\bin\Debug\net8.0-windows\MISApplication.deps.json
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\bin\Debug\net8.0-windows\MISApplication.runtimeconfig.json
@@ -62,10 +60,6 @@ C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debu
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\MISApplication_MarkupCompile.lref
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\App.baml
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
-C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\templates\Hed.g.cs
-C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\templates\Hed.baml
-C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Windows\RegistrWindow.g.cs
-C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Windows\RegistrWindow.baml
 C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\App.baml
 C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\MISApplication_MarkupCompile.lref
@@ -82,3 +76,16 @@ C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\
 C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\TextBox.baml
 C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\View\ZapisPage.baml
 C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\ComboBox.baml
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\Button.baml
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\Color.baml
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\ComboBox.baml
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\RadioButton.baml
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\View\Hed.baml
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\View\Hed.g.cs
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\View\MainWindow.g.cs
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\View\RegistrWindow.g.cs
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\View\ZapisPage.g.cs
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\TextBox.baml
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\View\MainWindow.baml
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\View\RegistrWindow.baml
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\View\ZapisPage.baml

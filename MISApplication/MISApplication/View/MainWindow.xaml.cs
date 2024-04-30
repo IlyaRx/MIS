@@ -42,8 +42,6 @@ namespace MISApplication.View
             this.Close();
         }
 
-
-
     }
 }
 

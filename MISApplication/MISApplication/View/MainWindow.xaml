@@ -25,19 +25,19 @@
                              Stroke="{StaticResource greenLight}"
                              StrokeThickness ="40"
                              Panel.ZIndex="0"/>
-                    
+
                     <Ellipse Canvas.Left="427" 
                              Canvas.Top="197" 
                              Width="293" 
                              Height="293" 
                              Fill="{StaticResource green-greyDark}"/>
-                    
+
                     <Ellipse Canvas.Left="-64" 
                              Canvas.Top="593" 
                              Width="479" 
                              Height="479" 
                              Fill="{StaticResource greenLight}" />
-                    
+
                     <Ellipse Canvas.Left="836" 
                             Canvas.Top="427"
                             Width="259" 
@@ -45,7 +45,7 @@
                             Stroke="{StaticResource greenLight}"
                             StrokeThickness ="40"
                             Panel.ZIndex="0" />
-                    
+
                     <Ellipse Canvas.Left="1045" 
                             Canvas.Top="-72"
                             Width="445" 
@@ -53,13 +53,13 @@
                             Stroke="{StaticResource green-greyDark}"
                             StrokeThickness ="40"
                             Panel.ZIndex="0"/>
-                    
+
                     <Ellipse Canvas.Left="792" 
                             Canvas.Top="777" 
                             Width="506" 
                             Height="508" 
                             Fill="{StaticResource green-greyDark}" />
-                    
+
                     <Ellipse Canvas.Left="836" 
                             Canvas.Top="427"
                             Width="259" 
@@ -67,7 +67,7 @@
                             Stroke="{StaticResource greenLight}"
                             StrokeThickness ="40"
                             Panel.ZIndex="0"  />
-                    
+
                     <Ellipse Canvas.Left="1556" 
                             Canvas.Top="777"
                             Width="491" 
@@ -75,25 +75,25 @@
                             Stroke="{StaticResource greenLight}"
                             StrokeThickness ="40"
                             Panel.ZIndex="0" />
-                    
+
                     <Ellipse Canvas.Left="1877" 
                             Canvas.Top="-28" 
                             Width="398" 
                             Height="400" 
                             Fill="{StaticResource green-greyDark}"  />
-                    
+
                     <Ellipse Canvas.Left="-64" 
                             Canvas.Top="593" 
                             Width="479" 
                             Height="479" 
                             Fill="{StaticResource greenLight}" />
-                    
+
                     <Ellipse Canvas.Left="1450" 
                             Canvas.Top="372" 
                             Width="352" 
                             Height="352" 
                             Fill="{StaticResource greenLight}" />
-                    
+
                 </Canvas>
 
                 <!--Форма-->
@@ -173,7 +173,21 @@
                 </Border>
             </Grid>
         </Border>
-        
+        <ComboBox Style="{StaticResource ComoBoxPoisk}"  
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top" 
+                  Grid.Row="1" 
+                  Margin="555,153,0,0"
+                  Tag="qwe">
+            <TextBlock>Tom</TextBlock>
+            <TextBlock>Bddddddddddddddob</TextBlock>
+            <TextBlock>Sam</TextBlock>
+            <TextBlock>Alice</TextBlock>
+        </ComboBox>
+
+        <!--Шапка-->
+        <local:Hed Grid.Row="0"/>
+
         <!--Шапка-->
         <local:Hed Grid.Row="0"/>
     </Grid>

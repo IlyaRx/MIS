@@ -20,8 +20,23 @@
                 Margin="0 23 15 0"
                 />
         <ComboBox Style="{DynamicResource ComoBoxPoisk}" 
-                  Height="50" 
-                  Width="200"
-                  Tag="Типы услуг"/>
-        </Grid>
-</UserControl>
+                  Height="50"
+                  Width="300"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Tag="Типы услуг" Margin="10 104" />
+        <ComboBox Style="{DynamicResource ComoBoxPoisk}" 
+                  Height="50"
+                  Width="300"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Tag="Услуга" Margin="10,196,0,0" />
+        <ComboBox Style="{DynamicResource ComoBoxPoisk}" 
+                  Height="50"
+                  Width="300"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Tag="Врач" Margin="10,290,0,0" />
+
+    </Grid>
+</UserControl>  
