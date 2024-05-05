@@ -1,0 +1,160 @@
+﻿<UserControl x:Class="MISApplication.View.PoiskPasientPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MISApplication.View"
+             mc:Ignorable="d">
+    <UserControl.Background>
+        <LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 1">
+            <GradientStop Color="#8DBFB0" Offset="1"/>
+            <GradientStop Color="#EDFFFA" Offset="0.0"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Style="{StaticResource bord}"
+                Margin="30">
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Style="{StaticResource textBlockBrownTitle}"
+                           Text="Для начало работы нужно выбрать пациента!"/>
+                <TextBlock Style="{StaticResource textBlockGreenTitle}"
+                           Text="Ниже дан поиск карт пациентов, выберите нужного"/>
+                <TextBlock Style="{StaticResource textBlockGreenTitle}"
+                           Text="вам пациента, для продолжения работы"/>
+            </StackPanel>
+        </Border>
+
+        <Grid Margin="20 0 20 20"
+              Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <TextBox Height="47" Margin="10 20 150 0"
+                     VerticalAlignment="Top"
+                     Tag="Поиск"
+                     Style="{StaticResource TextBoxGreen}"/>
+            
+            
+            <Button Style="{StaticResource butForm}"
+                    Content="Поиск "
+                    Width="120" Height="44"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Margin="0 23 15 0"
+            />
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0"
+                    Style="{StaticResource bord}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Margin="10 5 0 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="ID" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
+                            <TextBlock Grid.Column="1" Text="Фамилия" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
+                            <TextBlock Grid.Column="2" Text="Имя" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
+                            <TextBlock Grid.Column="3" Text="Отчество" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
+                            <TextBlock Grid.Column="4" Text="Паспорт" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
+                        </Grid>
+                        <ListBox HorizontalContentAlignment="Stretch"
+                                     Background="Transparent"
+                                     Margin="5"
+                                     Grid.Row="1"
+                                     BorderThickness="0">
+                            <local:ItemListPasient/>
+                            <local:ItemListPasient/>
+                            <local:ItemListPasient/>
+                            <local:ItemListPasient/>
+                            <local:ItemListPasient/>
+                        </ListBox>
+                    </Grid>
+
+                </Border>
+
+
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.6*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.5*"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" 
+                    Style="{StaticResource bord}">
+                        <StackPanel>
+                            <TextBlock Text="Отсортировать по:"
+                                Margin="10 10 10 0"
+                                Style="{StaticResource textBlockGreenTitle}"/>
+                            <RadioButton Content="Возростанию"
+                                 Margin="10 0 10 3"
+                                 IsChecked="True"
+                                 Style="{StaticResource radioButtonFiltr}"/>
+                            <RadioButton Content="Убыванию"
+                                 Margin="10 0 10 3"
+                                 Style="{StaticResource radioButtonFiltr}"/>
+                        </StackPanel>
+
+                    </Border>
+
+                    <Border Grid.Row="1"
+                            
+                    Style="{StaticResource bord}">
+
+                        <StackPanel>
+                            <TextBlock Text="Поиск по:"
+                               Margin="0 10 0 0"
+                                   Style="{StaticResource textBlockGreenTitle}"/>
+
+                            <RadioButton Content="ФИО"
+                                 Margin="10 0 10 3"
+                                 IsChecked="True"
+                                 Style="{StaticResource radioButtonFiltr}"/>
+                            <RadioButton Content="СНИЛС"
+                                 Margin="10 3 10 3"
+                                 Style="{StaticResource radioButtonFiltr}"/>
+                            <RadioButton Content="Паспот"
+                                 Margin="10 3 10 3"
+                                 Style="{StaticResource radioButtonFiltr}"/>
+                            <RadioButton Content="Номер Стаховки"
+                                 Margin="10 3 10 5"
+                                 Style="{StaticResource radioButtonFiltr}"/>
+
+                        </StackPanel>
+
+                    </Border>
+                    <Button Grid.Row="2"
+                            Style="{StaticResource butFormBrown}"
+                            Margin="30 15 30 15"
+                            Content="Выбрать"/>
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+
+    </Grid>
+</UserControl>

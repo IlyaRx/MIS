@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="MISApplication.View.ItemListPasient"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MISApplication.View"
+             mc:Ignorable="d" >
+    <Grid>
+        <Border x:Name="border" Background="Transparent"
+                BorderThickness="0 2 0 0"
+                BorderBrush="{StaticResource brown}">
+            <Grid Margin="10 0 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="Id" Grid.Column="0" Text="1" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
+                <TextBlock x:Name="Lastname" Grid.Column="1" Text="Куликов" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
+                <TextBlock x:Name="Name" Grid.Column="2" Text="Илья" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
+                <TextBlock x:Name="SecondName" Grid.Column="3" Text="Александровичь" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
+                <TextBlock x:Name="Pasport" Grid.Column="4" Text="** ** ****32" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

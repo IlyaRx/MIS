@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="MISApplication.View.Diagnostic"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MISApplication.View"
+             mc:Ignorable="d" >
+    <Border Style="{StaticResource bord}">
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="50"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"
+                         VerticalAlignment="Center">
+                <TextBlock Text="Название диагностики" Style="{StaticResource textBlockForm}"/>
+                <TextBlock Text="Анализ крови" Style="{StaticResource textBlockForm}"/>
+            </StackPanel>
+            <StackPanel Margin="20 0 20 0"
+                     Grid.Column="1"
+                     VerticalAlignment="Center">
+                <TextBlock Text="Дата" Style="{StaticResource textBlockForm}"/>
+                <TextBlock Text="Время" Style="{StaticResource textBlockForm}"/>
+            </StackPanel>
+            <StackPanel Margin="20 0 20 0"
+                     Grid.Column="2"
+                     VerticalAlignment="Center">
+                <TextBlock Text="Результат" Style="{StaticResource textBlockForm}"/>
+                <TextBlock Text="Анализ крови в нориме" Style="{StaticResource textBlockForm}"/>
+            </StackPanel>
+            <Button Grid.Column="3"
+                 Style="{StaticResource butTop}"
+                 Background="Transparent">
+                <Button.Content>
+                    <Canvas Width="37" Height="37">
+                        <Path Data="M11.6667 6.5625H13.125V15.6599C13.125 16.2068 12.9883 16.7449 12.7274 17.2254L7.49976 26.8552C6.57662 28.5558 7.80774 30.6249 9.74266 30.6249H25.2573C27.1922 30.6249 28.4234 28.5558 27.5002 26.8552L22.2725 17.2254C22.0116 16.7449 21.875 16.2068 21.875 15.6599V6.5625H23.3333C23.9374 6.5625 24.4271 6.07281 24.4271 5.46875C24.4271 4.86469 23.9374 4.375 23.3333 4.375H11.6667C11.0626 4.375 10.5729 4.86469 10.5729 5.46875C10.5729 6.07281 11.0626 6.5625 11.6667 6.5625ZM15.3125 15.6599V6.5625H19.6875V15.6599C19.6875 16.5712 19.9151 17.4681 20.35 18.269L21.5158 20.4167H13.4841L14.65 18.269C15.0847 17.4681 15.3125 16.5712 15.3125 15.6599ZM12.2966 22.6042H22.7033L25.5777 27.8989C25.7095 28.1419 25.5337 28.4374 25.2573 28.4374H9.74266C9.46625 28.4374 9.29037 28.1419 9.42225 27.8989L12.2966 22.6042Z" 
+                           Fill="#212121"/>
+                    </Canvas>
+
+                </Button.Content>
+            </Button>
+        </Grid>
+    </Border>
+</UserControl>

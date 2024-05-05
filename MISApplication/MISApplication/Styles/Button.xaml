@@ -4,6 +4,7 @@
         <ResourceDictionary Source="/Styles/Color.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
+    <!--#region butTop-->
     <Style x:Key="butTop" TargetType="Button">
         <Setter Property="Background" Value="{StaticResource beigeDark}"/>
         <Setter Property="Template">
@@ -24,8 +25,9 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    <!--#endregion-->
 
-    
+    <!--#region butFormGreen-->
     <Style x:Key="butForm" TargetType="Button">
         <Setter Property="Template">
             <Setter.Value>
@@ -64,4 +66,74 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--#endregion-->
+
+    <!--#region butFormBrown-->
+    <Style x:Key="butFormBrown" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                     BorderBrush="{StaticResource brown}"
+                     BorderThickness="2"
+                     CornerRadius="10">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                <GradientStop Color="#FFD2BB" Offset="0.0"/>
+                                <GradientStop Color="#FFB3B3" Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Label Content="{TemplateBinding Content}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontSize="25"
+                               Foreground="{StaticResource brownDark}"
+                               FontFamily="Calibri"
+                               FontWeight="Black"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                        <GradientStop Color="#FFFFE3D4" Offset="0.0"/>
+                                        <GradientStop Color="#FFB3B3" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region butFormBrownMono-->
+    <Style x:Key="butFormBrownMono" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                             BorderThickness="0"
+                             CornerRadius="10"
+                            Background="{StaticResource brownDark}">
+                        <Label Content="{TemplateBinding Content}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="25"
+                           Foreground="LightGray"
+                           FontFamily="Calibri"
+                           FontWeight="Black"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource brown}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
 </ResourceDictionary>

@@ -4,39 +4,292 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MISApplication.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="873" d:DesignWidth="1106"
-             Background="LightGray">
-    <Grid>
-        <TextBox Height="47" Margin="10 20 150 0"
+             mc:Ignorable="d">
+
+    <UserControl.Background>
+        <LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 1">
+            <GradientStop Color="#8DBFB0" Offset="1"/>
+            <GradientStop Color="#EDFFFA" Offset="0.0"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+
+
+    <Grid Margin="20 0 0 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="Poisk"
+                 Height="47" Margin="10 20 150 0"
                  VerticalAlignment="Top"
-                 Tag="ФИО Пациента"
-                 Style="{StaticResource TextBoxPoisk}"/>
-        <Button Style="{StaticResource butForm}"
-                Content="Поиск"
+                 Tag="Поиск"
+                 Style="{StaticResource TextBoxGreen}"/>
+        <Button x:Name="ButPoisk"
+                Style="{StaticResource butForm}"
+                Content="Поиск "
                 Width="120" Height="44"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
-                Margin="0 23 15 0"
+                Margin="0 23 15 0" Click="ButPoisk_Click" 
                 />
-        <ComboBox Style="{DynamicResource ComoBoxPoisk}" 
-                  Height="50"
-                  Width="300"
-                  HorizontalAlignment="Left"
-                  VerticalAlignment="Top"
-                  Tag="Типы услуг" Margin="10 104" />
-        <ComboBox Style="{DynamicResource ComoBoxPoisk}" 
-                  Height="50"
-                  Width="300"
-                  HorizontalAlignment="Left"
-                  VerticalAlignment="Top"
-                  Tag="Услуга" Margin="10,196,0,0" />
-        <ComboBox Style="{DynamicResource ComoBoxPoisk}" 
-                  Height="50"
-                  Width="300"
-                  HorizontalAlignment="Left"
-                  VerticalAlignment="Top"
-                  Tag="Врач" Margin="10,290,0,0" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                </Grid.RowDefinitions>
+
+
+                <Border Grid.Row="1"
+                        Style="{StaticResource bord}">
+                    <Grid Margin="20">
+                        <TextBlock Style="{StaticResource textBlockForm}"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Top"
+                                   Text="Фамилия:" 
+                                   Margin="0,10,0,0"/>
+                        <TextBlock Style="{StaticResource textBlockForm}"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Top"
+                                            Text="Имя:" 
+                                           Margin="0,40,0,0"/>
+                        <TextBlock Style="{StaticResource textBlockForm}"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Top"
+                                            Text="Отчестов:" 
+                                           Margin="0,70,0,0"/>
+                        <TextBlock Style="{StaticResource textBlockForm}"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Top"
+                                            Text="СНИЛС:" 
+                                           Margin="0,100,0,0"/>
+                        <TextBlock Style="{StaticResource textBlockForm}"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Top"
+                                            Text="Пспорт:" 
+                                           Margin="0,130,0,0"/>
+                        <TextBlock Style="{StaticResource textBlockForm}"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Top"
+                                            Text="Возраст:" 
+                                           Margin="0,160,0,0"/>
+
+
+                        <TextBlock x:Name="LastnameTextBlock"
+                                           Style="{StaticResource textBlockForm}"
+                                           HorizontalAlignment="Right"
+                                           VerticalAlignment="Top"
+                                           Text="Куликов" 
+                                           Margin="0,10,10,0"/>
+                        <TextBlock x:Name="NameTextBlock"
+                                           Style="{StaticResource textBlockForm}"
+                                           HorizontalAlignment="Right"
+                                           VerticalAlignment="Top"
+                                           Text="Илья" 
+                                           Margin="0,40,10,0"/>
+                        <TextBlock x:Name="SecondNameTextBlock"
+                                           Style="{StaticResource textBlockForm}"
+                                           HorizontalAlignment="Right"
+                                           VerticalAlignment="Top"
+                                           Text="Александрович" 
+                                           Margin="0,70,10,0"/>
+                        <TextBlock x:Name="SnilsTextBlock"
+                                           Style="{StaticResource textBlockForm}"
+                                           HorizontalAlignment="Right"
+                                           VerticalAlignment="Top"
+                                           Text="123 123 122 23" 
+                                           Margin="0,100,10,0"/>
+                        <TextBlock x:Name="PsportTextBlock"
+                                           Style="{StaticResource textBlockForm}"
+                                           HorizontalAlignment="Right"
+                                           VerticalAlignment="Top"
+                                           Text="18 18 455434" 
+                                           Margin="0,130,10,0"/>
+                        <TextBlock x:Name="AgeTextBlock"
+                                           Style="{StaticResource textBlockForm}"
+                                           HorizontalAlignment="Right"
+                                           VerticalAlignment="Top"
+                                           Text="20" 
+                                           Margin="0,160,10,0"/>
+                    </Grid>
+ 
+                </Border>
+
+
+                <Border Grid.Row="0"
+                        Style="{StaticResource bord}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Margin="10 5 10 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="ID" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
+                            <TextBlock Grid.Column="1" Text="Фамилия" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
+                            <TextBlock Grid.Column="2" Text="Имя" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
+                            <TextBlock Grid.Column="3" Text="Отчество" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
+                            <TextBlock Grid.Column="4" Text="Паспорт" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
+                        </Grid>
+                        <ListBox x:Name="listPasient"
+                                 HorizontalContentAlignment="Stretch"
+                                 Background="Transparent"
+                                 Margin="5"
+                                 Grid.Row="1"
+                                 BorderThickness="0" 
+                                 SelectionChanged="listPasient_SelectionChanged">
+                        </ListBox>
+                    </Grid>
+
+                </Border>
+
+
+                <Button x:Name="NewZapis"
+                        Grid.Row="2"
+                        Style="{StaticResource butFormBrown}"
+                        Margin="30 15 30 15"
+                        Content="Записать" Click="NewZapis_Click"/>
+
+            </Grid>
+
+
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" 
+                        Style="{StaticResource bord}">
+                    <StackPanel>
+                        <TextBlock Text="Отсортировать по:"
+                                    Margin="10 10 10 0"
+                                    Style="{StaticResource textBlockGreenTitle}"/>
+                        <RadioButton x:Name="OrderBy"
+                                     Content="Возростанию"
+                                     Margin="10 0 10 3"
+                                     IsChecked="True"
+                                     Style="{StaticResource radioButtonFiltr}"/>
+                        <RadioButton x:Name="OrderByR"
+                                     Content="Убыванию"
+                                     Margin="10 0 10 3"
+                                     Style="{StaticResource radioButtonFiltr}"/>
+                    </StackPanel>
+
+                </Border>
+
+                <Border Grid.Column="1"
+                        Style="{StaticResource bord}">
+
+                    <StackPanel>
+                        <TextBlock Text="Поиск по:"
+                                   Margin="0 10 0 0"
+                                       Style="{StaticResource textBlockGreenTitle}"/>
+
+                        <RadioButton x:Name="RadButFIO"
+                                     Content="Фамилия"
+                                     Margin="10 0 10 3"
+                                     IsChecked="True"
+                                     Style="{StaticResource radioButtonFiltr}"/>
+                        <RadioButton x:Name="RadButCNILS"
+                                     Content="СНИЛС"
+                                     Margin="10 3 10 3"
+                                     Style="{StaticResource radioButtonFiltr}"/>
+                        <RadioButton x:Name="RadButPasport"
+                                     Content="Паспот"
+                                     Margin="10 3 10 3"
+                                     Style="{StaticResource radioButtonFiltr}"/>
+                        <RadioButton x:Name="RadButSave"
+                                     Content="Номер Стаховки"
+                                     Margin="10 3 10 5"
+                                     Style="{StaticResource radioButtonFiltr}"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Border Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="1"
+                        Style="{StaticResource bord}">
+                    <StackPanel>
+                        <TextBlock Text="Запись"
+                                   Style="{StaticResource textBlockGreenTitle}"
+                                   Margin="0 10 0 0"/>
+
+                        <ComboBox x:Name="TypeUslug"
+                                  Style="{DynamicResource ComoBoxPoisk}" 
+                                  Height="50"
+                                  Margin="30 20 30 0"
+                                  Tag="Типы услуг" />
+                        <ComboBox x:Name="Usluga"
+                                  Style="{DynamicResource ComoBoxPoisk}" 
+                                  Height="50"
+                                  Margin="30 15 30 0"
+                                  Tag="Услуга" />
+                        <ComboBox x:Name="Doctor"
+                                  Style="{DynamicResource ComoBoxPoisk}" 
+                                  Height="50"
+                                  Margin="30 15 30 0"
+                                  Tag="Врач"  />
+                        
+                        <DatePicker x:Name="DateStart"
+                                    Margin="30 15 30 0"
+                                    Height="50"
+                                    Tag="Дата"
+                                    CalendarStyle="{StaticResource datePikerCalendar}"
+                                    Style="{StaticResource datePiker}"/>
+                        
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="30 15 30 10">
+
+                            <TextBlock Text="Время" Style="{StaticResource textBlockForm}"
+                                       VerticalAlignment="Center"/>
+
+                            <TextBox x:Name="Hours"
+                                     Style="{StaticResource TextBoxGreen}"
+                                     Height="44" Width="100"
+                                     Tag="Часы"
+                                     Margin="20 0 10 0"/>
+
+                            <TextBlock Text=":" Style="{StaticResource textBlockForm}"
+                                       VerticalAlignment="Center"/>
+
+                            <TextBox x:Name="Minute"
+                                     Style="{StaticResource TextBoxGreen}"
+                                     Height="44" Width="100"
+                                     Tag="Минуты"
+                                     Margin="10 0 20 0"/>
+                        </StackPanel>
+                        
+
+                    </StackPanel>
+                    
+                    
+                </Border>
+
+            </Grid>
+
+
+        </Grid>
 
     </Grid>
-</UserControl>  
+</UserControl>

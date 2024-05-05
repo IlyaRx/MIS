@@ -1,0 +1,109 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/Color.xaml"/>
+        <ResourceDictionary Source="/Styles/TextBlock.xaml"/>
+        <ResourceDictionary Source="/Styles/TextBox.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <Style x:Key="datePikerCalendar" TargetType="{x:Type Calendar}">
+        <Setter Property="Foreground" Value="{StaticResource black}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource green}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0.5 1" EndPoint="0.5 0">
+                    <GradientStop Color="#8DBFB0" Offset="1"/>
+                    <GradientStop Color="#EDFFFA" Offset="0.0"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Calendar}">
+                    <StackPanel x:Name="PART_Root"
+                                HorizontalAlignment="Center">
+                        <CalendarItem x:Name="PART_CalendarItem"
+                                      Background="{TemplateBinding Background}"
+                                      BorderBrush="{TemplateBinding BorderBrush}"
+                                      BorderThickness="{TemplateBinding BorderThickness}"
+                                      Style="{TemplateBinding CalendarItemStyle}"
+                                      Margin="0 5 0 0"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="datePiker" TargetType="{x:Type DatePicker}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DatePicker}">
+                    <Grid>
+                        <Border x:Name="border"
+                                Background="White"
+                                Height="{TemplateBinding Height}"
+                                BorderBrush="{StaticResource green}"
+                                BorderThickness="2"
+                                CornerRadius="10"
+                                Grid.ColumnSpan="1"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="44"/>
+                            </Grid.ColumnDefinitions>
+
+                            <DatePickerTextBox x:Name="PART_TextBox"
+                                               Grid.Column="0"
+                                               Background="Transparent"
+                                               BorderThickness="0"
+                                               Margin="5 0 0 0"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="Center"
+                                               FontSize="20"
+                                               FontFamily="Calibri"
+                                               Foreground="Black"/>
+
+                            <Button x:Name="PART_Button"
+                                    Grid.Column="1"
+                                    Style="{StaticResource butTop}"
+                                    Background="Transparent">
+                                <Button.Content>
+                                    <Canvas Width="20" Height="18">
+                                        <Path Data="M15.6301 0C17.425 0 18.8801 1.45507 18.8801 3.25V14.75C18.8801 16.5449 17.425 18 15.6301 18H4.13013C2.3352 18 0.880127 16.5449 0.880127 14.75V3.25C0.880127 1.45507 2.3352 0 4.13013 0H15.6301ZM17.3801 5.5H2.38013V14.75C2.38013 15.7165 3.16363 16.5 4.13013 16.5H15.6301C16.5966 16.5 17.3801 15.7165 17.3801 14.75V5.5ZM5.63013 11.5C6.32049 11.5 6.88013 12.0596 6.88013 12.75C6.88013 13.4404 6.32049 14 5.63013 14C4.93977 14 4.38013 13.4404 4.38013 12.75C4.38013 12.0596 4.93977 11.5 5.63013 11.5ZM9.88013 11.5C10.5705 11.5 11.1301 12.0596 11.1301 12.75C11.1301 13.4404 10.5705 14 9.88013 14C9.18973 14 8.63013 13.4404 8.63013 12.75C8.63013 12.0596 9.18973 11.5 9.88013 11.5ZM5.63013 7.5C6.32049 7.5 6.88013 8.0596 6.88013 8.75C6.88013 9.4404 6.32049 10 5.63013 10C4.93977 10 4.38013 9.4404 4.38013 8.75C4.38013 8.0596 4.93977 7.5 5.63013 7.5ZM9.88013 7.5C10.5705 7.5 11.1301 8.0596 11.1301 8.75C11.1301 9.4404 10.5705 10 9.88013 10C9.18973 10 8.63013 9.4404 8.63013 8.75C8.63013 8.0596 9.18973 7.5 9.88013 7.5ZM14.1301 7.5C14.8205 7.5 15.3801 8.0596 15.3801 8.75C15.3801 9.4404 14.8205 10 14.1301 10C13.4397 10 12.8801 9.4404 12.8801 8.75C12.8801 8.0596 13.4397 7.5 14.1301 7.5ZM15.6301 1.5H4.13013C3.16363 1.5 2.38013 2.2835 2.38013 3.25V4H17.3801V3.25C17.3801 2.2835 16.5966 1.5 15.6301 1.5Z" 
+                                              Fill="#212121" />
+                                        </Canvas>
+                                </Button.Content>
+                            </Button>
+
+                            <Popup x:Name="PART_Popup"
+                                   AllowsTransparency="True"
+                                   Placement="Bottom"
+                                   PlacementTarget="{Binding ElementName=PART_TextBox}"
+                                   StaysOpen="False"/>
+
+                            <TextBlock x:Name="pod"
+                                       Grid.Column="0"
+                                       Text="{TemplateBinding Tag}"
+                                       Style="{StaticResource textBlockInElemrnt}"
+                                       Margin="8 0 0 0"
+                                       Visibility="Hidden"/>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="pod" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="PART_TextBox" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+
+
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+</ResourceDictionary>

@@ -7,10 +7,52 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\AdministationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Diagnostic.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DiagnosticPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DoctorWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Hed.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\HisrtoryPasientPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\HistiryPasiena.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\HospitalisationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ItemListPasient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PoiskPasientPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PriemPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RedisterUserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RegisrtEMKPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\RegistrWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Users.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UsersPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ZapisPage.xaml.cs">
@@ -18,6 +60,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Styles\Border.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Styles\Button.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -27,10 +72,28 @@
     <Page Update="Styles\ComboBox.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Styles\DatePicker.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Styles\RadioButton.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Styles\TextBlock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Styles\TextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AdministationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Diagnostic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DiagnosticPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DoctorWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Hed.xaml">
@@ -39,10 +102,40 @@
     <Page Update="Styles\DictionaryStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\HisrtoryPasientPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\HistiryPasiena.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\HospitalisationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ItemListPasient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\PoiskPasientPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PriemPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RedisterUserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RegisrtEMKPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\RegistrWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Users.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UsersPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ZapisPage.xaml">

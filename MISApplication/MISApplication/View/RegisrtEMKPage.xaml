@@ -1,0 +1,138 @@
+﻿<UserControl x:Class="MISApplication.View.RegisrtEMKPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MISApplication.View">
+    <!--d:DesignWidth="1106" Height="710"-->
+
+
+    <UserControl.Background>
+        <LinearGradientBrush StartPoint="0.5 0" EndPoint="0.5 1">
+            <GradientStop Color="#8DBFB0" Offset="1"/>
+            <GradientStop Color="#EDFFFA" Offset="0.0"/>
+        </LinearGradientBrush>
+    </UserControl.Background>
+
+
+    <Grid Margin="50 50 50 50">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            
+            <Border Style="{StaticResource bord}" Margin="10" Grid.Row="0">
+                <StackPanel Margin="15">
+                    <TextBlock Style="{StaticResource textBlockGreenTitle}"
+                               Text="ФИО"
+                               Margin="10 7 10 0"/>
+                    
+                    <TextBox Style="{StaticResource TextBoxGreen}"
+                             Tag="Фамилия"
+                             Margin="0 7 0 5"
+                             Height="44"/>
+                    <TextBox Style="{StaticResource TextBoxGreen}"
+                             Tag="Имя"
+                             Margin="0 7 0 5"
+                             Height="44"/>
+                    <TextBox Style="{StaticResource TextBoxGreen}"
+                             Tag="Отчество"
+                             Margin="0 7 0 5"
+                             Height="44"/>
+                    
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource bord}" Margin="10" Grid.Row="1">
+                <StackPanel Margin="15">
+                    <TextBlock Style="{StaticResource textBlockGreenTitle}"
+                               Text="Страховка"
+                               Margin="10 7 10 0"/>
+
+                    <TextBox Style="{StaticResource TextBoxGreen}"
+                             Tag="Номер страховки"
+                             Margin="0 7 0 5"
+                             Height="44"/>
+                    <TextBox Style="{StaticResource TextBoxGreen}"
+                             Tag="Страховая компания"
+                             Margin="0 7 0 5"
+                             Height="44"/>
+                    <DatePicker Style="{StaticResource datePiker}"
+                                CalendarStyle="{StaticResource datePikerCalendar}"
+                                Tag="Дата окончания"
+                                Margin="0 7 0 5"
+                                Height="44"/>
+                    
+                </StackPanel>
+            </Border>
+
+        </Grid>
+        
+        
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            
+            <Border Style="{StaticResource bord}"
+                    Grid.Row="0"
+                    Margin="10">
+                <StackPanel Margin="15">
+                    <TextBlock Style="{StaticResource textBlockGreenTitle}"
+                               Text="Персональные данные"
+                               Margin="0 5 0 0"/>
+
+                
+                    <TextBox Style="{StaticResource TextBoxGreen}"
+                             Tag="Адрес проживания"
+                             Margin="0 5 0 5"
+                             Height="44"/>
+                    <TextBox Style="{StaticResource TextBoxGreen}"
+                             Tag="Номер телефона"
+                             Margin="0 5 0 5"
+                             Height="44"/>
+                    <TextBox Style="{StaticResource TextBoxGreen}"
+                             Tag="Паспорт"
+                             Margin="0 5 0 5"
+                             Height="44"/>
+                    <TextBox Style="{StaticResource TextBoxGreen}"
+                             Tag="СНИЛС"
+                             Margin="0 5 0 5"
+                             Height="44"/>
+                    <TextBox Style="{StaticResource TextBoxGreen}"
+                             Tag="Почта"
+                             Margin="0 5 0 5"
+                             Height="44"/>
+                    <ComboBox Style="{StaticResource ComoBoxPoisk}"
+                             Tag="Пол"
+                             Margin="0 5 0 5"
+                             Height="44">
+                        <TextBlock Style="{StaticResource textBlockForm}" Text="Мужской"/>
+                        <TextBlock Style="{StaticResource textBlockForm}" Text="Женский"/>
+                    </ComboBox>
+
+                    <DatePicker Style="{StaticResource datePiker}"
+                                CalendarStyle="{StaticResource datePikerCalendar}"
+                                Tag="Дата рождениня"
+                                Margin="0 5 0 5"
+                                Height="44"/>
+
+                </StackPanel>
+            </Border>
+
+            <Button Style="{StaticResource butForm}"
+                    Content="Сохранить"
+                    Margin="20"
+                    Grid.Row="2"/>
+
+        </Grid>
+    </Grid>
+</UserControl>

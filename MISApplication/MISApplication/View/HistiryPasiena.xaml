@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="MISApplication.View.HistiryPasiena"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MISApplication.View"
+             mc:Ignorable="d" >
+    <Border Style="{StaticResource bord}">
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="50"/>
+            </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Куликов" Style="{StaticResource textBlockForm}"/>
+                    <TextBlock Text="Илья" Style="{StaticResource textBlockForm}"/>
+                    <TextBlock Text="Александрович" Style="{StaticResource textBlockForm}"/>
+                </StackPanel>
+            <StackPanel Margin="20 0 20 0"
+                        Grid.Column="1"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Дата" Style="{StaticResource textBlockForm}"/>
+                <TextBlock Text="Время" Style="{StaticResource textBlockForm}"/>
+            </StackPanel>
+            <StackPanel Margin="20 0 20 0"
+                        Grid.Column="2"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Отделение" Style="{StaticResource textBlockForm}"/>
+                <TextBlock Text="Теропивтическое" Style="{StaticResource textBlockForm}"/>
+            </StackPanel>
+            <Button Grid.Column="3"
+                    Style="{StaticResource butTop}"
+                    Background="Transparent">
+                <Button.Content>
+                    <Canvas Width="37" Height="37">
+                        <Path Data="M12.9175 8.47921H9.6355C8.99692 8.47921 8.47925 8.99688 8.47925 9.63546V30.448C8.47925 31.0865 8.99692 31.6042 9.6355 31.6042H27.3647C28.0032 31.6042 28.5209 31.0865 28.5209 30.448V9.63546C28.5209 8.99688 28.0032 8.47921 27.3647 8.47921H24.0826C23.4604 9.40882 22.4007 10.0209 21.198 10.0209H15.8022C14.5995 10.0209 13.5398 9.40882 12.9175 8.47921ZM24.6456 6.16671H27.3647C29.2803 6.16671 30.8334 7.71972 30.8334 9.63546V30.448C30.8334 32.3636 29.2803 33.9167 27.3647 33.9167H9.6355C7.71976 33.9167 6.16675 32.3636 6.16675 30.448V9.63546C6.16675 7.71972 7.71976 6.16671 9.6355 6.16671H12.3546C12.5463 4.43235 14.0167 3.08337 15.8022 3.08337H21.198C22.9834 3.08337 24.4538 4.43235 24.6456 6.16671ZM14.6459 6.55212C14.6459 7.1907 15.1636 7.70837 15.8022 7.70837H21.198C21.8366 7.70837 22.3542 7.1907 22.3542 6.55212C22.3542 5.91355 21.8366 5.39587 21.198 5.39587H15.8022C15.1636 5.39587 14.6459 5.91355 14.6459 6.55212Z" 
+                              Fill="#212121"/>
+                    </Canvas>
+                </Button.Content>
+            </Button>
+        </Grid>
+    </Border>
+</UserControl>

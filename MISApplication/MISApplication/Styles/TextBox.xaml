@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Styles/Color.xaml"/>
+        <ResourceDictionary Source="/Styles/TextBlock.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
     <Style x:Key="tBoxLogin" 
@@ -14,20 +15,22 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border Background="{TemplateBinding Background}"
+                    <Border  x:Name="border"
+                        Background="{TemplateBinding Background}"
                         BorderBrush="{StaticResource greenDark}"
                         BorderThickness="0 0 0 2"
                         Height="{TemplateBinding Height}"
                         Width="{TemplateBinding Width}">
                         <Grid>
                             <Label x:Name="pod"
-                               Content="{TemplateBinding Tag}"
-                               Foreground="#BBBBBB"
-                               Padding="5 0 0 2"
-                               Visibility="Collapsed"/>
+                                   Content="{TemplateBinding Tag}"
+                                   Foreground="#BBBBBB"
+                                   Padding="5 0 0 2"
+                                   Visibility="Collapsed"/>
                             <ScrollViewer x:Name="PART_ContentHost" 
-                                      HorizontalScrollBarVisibility="Hidden" 
-                                      VerticalScrollBarVisibility="Hidden"/>
+                                          HorizontalScrollBarVisibility="Hidden" 
+                                          VerticalScrollBarVisibility="Hidden"
+                                          />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -71,9 +74,11 @@
     </Style>
 
 
-    <Style x:Key="TextBoxPoisk"
+    <Style x:Key="TextBoxGreen"
            TargetType="{x:Type TextBox}">
         <Setter Property="Background" Value="White"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
@@ -83,14 +88,13 @@
                             BorderThickness="2"
                             BorderBrush="{StaticResource green}">
                         <Grid>
-                            <Label x:Name="pod"
-                                   Content="{TemplateBinding Tag}"
-                                   Foreground="#BBBBBB"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Center"
-                                   FontSize="20"
-                                   Visibility="Collapsed"/>
+                            <TextBlock x:Name="pod"
+                                       Text="{TemplateBinding Tag}"
+                                       Style="{StaticResource textBlockInElemrnt}"
+                                       Visibility="Collapsed"
+                                       Margin="5 0 5 0"/>
                             <ScrollViewer x:Name="PART_ContentHost" 
+                                          Margin="5 0 5 0"
                                           HorizontalScrollBarVisibility="Hidden" 
                                           VerticalScrollBarVisibility="Hidden"/>
                         </Grid>
@@ -107,4 +111,87 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+
+    <Style x:Key="TextBoxGreenMulti"
+           TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="AcceptsReturn" Value="True"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border x:Name="border"
+                            Background="White"
+                            CornerRadius="10"
+                            BorderThickness="2"
+                            BorderBrush="{StaticResource green}">
+                        <Grid>
+                            <TextBlock x:Name="pod"
+                                       Text="{TemplateBinding Tag}"
+                                       Style="{StaticResource textBlockInElemrnt}"
+                                       Visibility="Collapsed"
+                                       VerticalAlignment="Top"
+                                       Margin="5 5 5 0"/>
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Margin="5 5 5 0"
+                                          HorizontalAlignment="Left"
+                                          VerticalAlignment="Top"
+                                          HorizontalScrollBarVisibility="Hidden" 
+                                          VerticalScrollBarVisibility="Hidden"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter TargetName="pod" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="pod" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TextBoxBrown"
+           TargetType="{x:Type TextBox}">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border x:Name="border"
+                            Background="White"
+                            CornerRadius="10"
+                            BorderThickness="2"
+                            BorderBrush="{StaticResource brown}">
+                        <Grid>
+                            <TextBlock x:Name="pod"
+                                       Text="{TemplateBinding Tag}"
+                                       Style="{StaticResource textBlockInElemrnt}"
+                                       Visibility="Collapsed"
+                                       Margin="5 0 5 0"/>
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                          Margin="5 0 5 0"
+                                          HorizontalScrollBarVisibility="Hidden" 
+                                          VerticalScrollBarVisibility="Hidden"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter TargetName="pod" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="pod" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

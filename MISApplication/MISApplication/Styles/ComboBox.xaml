@@ -4,6 +4,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Styles/Color.xaml"/>
+        <ResourceDictionary Source="/Styles/TextBlock.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
@@ -12,8 +13,10 @@
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
                     <Border x:Name="border"
                         Background="Transparent"
-                        BorderBrush="Transparent">
-                        <Canvas Width="17" Height="10">
+                        BorderBrush="Transparent"
+                            Height="40"
+                            Width="40">
+                        <Canvas Width="25" Height="10">
                             <Path Data="M0.819013 0.792901C1.20954 0.402381 1.8427 0.402381 2.23323 0.792901L8.52612 7.08581L14.819 0.792901C15.2095 0.402381 15.8427 0.402381 16.2332 0.792901C16.6237 1.18343 16.6237 1.81659 16.2332 2.20712L9.23322 9.20711C8.84272 9.59761 8.20952 9.59761 7.81902 9.20711L0.819013 2.20712C0.428493 1.81659 0.428493 1.18343 0.819013 0.792901Z" 
                               Fill="{StaticResource black}">
                                 <Path.RenderTransform>
@@ -54,7 +57,6 @@
                 Focusable="False"
                 Background="{TemplateBinding Background}"/>
     </ControlTemplate>
-    
 
     <Style x:Key="ComoBoxPoisk"
            TargetType="{x:Type ComboBox}">
@@ -80,7 +82,7 @@
                                           Style="{StaticResource ComboBoxToggleButton}"
                                           HorizontalAlignment="Center"
                                           VerticalAlignment="Center"
-                                          Margin="0 3 10 0"
+                                          Margin="0 2 10 0"
                                           Focusable="False"
                                           ClickMode="Press"
                                           IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
@@ -95,15 +97,11 @@
                                               ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
                                               IsEnabled="True"/>
 
-                            <Label x:Name="pod"
-                                   Grid.Column="0"
-                                   Content="{TemplateBinding Tag}"
-                                   Foreground="Black"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Center"
-                                   Margin="0 -5 0 0"
-                                   FontSize="20"
-                                   Visibility="Collapsed"/>
+                            <TextBlock x:Name="pod"
+                                       Grid.Column="0"
+                                       Text="{TemplateBinding Tag}"
+                                       Style="{StaticResource textBlockInElemrnt}"
+                                       Margin="5 0 0 0"/>
 
                             <TextBox x:Name="PART_EditableTextBox"
                                      Template="{StaticResource ComboBoxTextBox}"
@@ -111,7 +109,7 @@
                                      Visibility="Hidden"
                                      FontSize="20"/>
 
-                            <Popup x:Name="popup"
+                            <Popup x:Name="PART_Popup"
                                    Placement="bottom"
                                    IsOpen="{TemplateBinding IsDropDownOpen}"
                                    AllowsTransparency="True"
@@ -122,17 +120,21 @@
                                       MinWidth="{TemplateBinding ActualWidth}"
                                       MaxHeight="{TemplateBinding MaxDropDownHeight}">
                                     <Border x:Name="drogDownBorder"
-                                            BorderThickness="1"
-                                            BorderBrush="{StaticResource green}"
-                                            Background="White"/>
-                                    <ScrollViewer Margin="5"
+                                                BorderThickness="1"
+                                                BorderBrush="{StaticResource green}"
+                                                Background="White"
+                                                ScrollViewer.CanContentScroll="True">
+                                        <ScrollViewer Margin="5"
                                                   SnapsToDevicePixels="True"
                                                   OverridesDefaultStyle="True"
                                                   Foreground="{StaticResource black}"
                                                   FontFamily="Calibri"
-                                                  FontSize="20"/>
-                                    <StackPanel IsItemsHost="True"
-                                                KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                                  FontSize="20"
+                                                  CanContentScroll="True">
+                                            <StackPanel IsItemsHost="True"
+                                                    KeyboardNavigation.DirectionalNavigation="Contained"/>
+                                        </ScrollViewer>
+                                    </Border>
                                 </Grid>
                             </Popup>
 
@@ -143,11 +145,7 @@
                             <Setter TargetName="drogDownBorder" Property="MinHeight" Value="95"/>
                         </Trigger>
 
-                        <Trigger Property="IsGrouping" Value="True">
-                            <Setter Property="ScrollViewer.CanContentScroll"  Value="False"/>
-                        </Trigger>
-
-                        <Trigger SourceName="popup" Property="AllowsTransparency" Value="True">
+                        <Trigger SourceName="PART_Popup" Property="AllowsTransparency" Value="True">
                             <Setter TargetName="drogDownBorder" Property="CornerRadius"  Value="4"/>
                             <Setter  TargetName="drogDownBorder" Property="Margin" Value="0 2 0 0"/>
                         </Trigger>

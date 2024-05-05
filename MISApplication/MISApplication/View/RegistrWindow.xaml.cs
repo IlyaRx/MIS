@@ -22,7 +22,22 @@ namespace MISApplication.View
         public RegistrWindow()
         {
             InitializeComponent();
+            content.Content = new ZapisPage();
         }
 
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if(titleReg != null)
+                titleReg.Text = "Запись пациента";
+            content.Content = new ZapisPage();
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            if (titleReg != null)
+                titleReg.Text = "Регистрация новгй\nэлектронной медицинской карты";
+            content.Content = new RegisrtEMKPage();
+        }
     }
 }
+

@@ -14,11 +14,13 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
                     <Border x:Name="border"
-                         Height="{TemplateBinding Height}"
-                         Width="{TemplateBinding Width}"
-                         Background="Transparent"
-                         CornerRadius="0 22 22 0"
-                         Margin="0 0 -18 0">
+                            Height="{TemplateBinding Height}"
+                            Width="{TemplateBinding Width}"
+                            Background="Transparent"
+                            BorderBrush="{StaticResource green}"
+                            BorderThickness="0"
+                            CornerRadius="0 22 22 0"
+                            Margin="0 0 -18 0">
                         <Grid>
                             <Border x:Name="dopBorder"
                                  Background="{StaticResource greenDark}"
@@ -67,6 +69,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="border" Property="Background" Value="{StaticResource green-greyLight}"/>
+                            <Setter TargetName="border" Property="BorderThickness" Value="0 1 1 1"/>
                             <Setter TargetName="dopBorder" Property="Visibility" Value="Visible"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
@@ -74,5 +77,76 @@
             </Setter.Value>
         </Setter>
 
+    </Style>
+
+
+
+    <Style x:Key="radioButtonFiltr" TargetType="RadioButton">
+        <Setter Property="Foreground" Value="{StaticResource greenDark}"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="Calibri"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="border"
+                            Height="{TemplateBinding Height}"
+                            Width="{TemplateBinding Width}"
+                            BorderThickness="2"
+                            CornerRadius="10">
+                        <Grid>
+                            <Ellipse x:Name="dopBorder"
+                                     Fill="{StaticResource greenDark}"
+                                     Width="10" Height="10"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Center"
+                                     Visibility="Collapsed"
+                                     Margin="3 0 0 0">
+
+                                <Ellipse.Effect>
+                                    <DropShadowEffect BlurRadius="14" ShadowDepth="0" Color="#FF40846E" Direction="0"/>
+                                </Ellipse.Effect>
+
+                                <Ellipse.Resources>
+                                    <Storyboard x:Key="FlameEffect">
+                                        <ColorAnimation Storyboard.TargetProperty="(Border.Effect).(DropShadowEffect.Color)"
+                                                         From="#184D3C" To="#12976D" 
+                                                         Duration="0:0:10" 
+                                                         AutoReverse="True" 
+                                                         RepeatBehavior="Forever"/>
+                                        <ColorAnimation Storyboard.TargetProperty="Fill.Color"
+                                                         From="#184D3C" To="#12976D" 
+                                                         Duration="0:0:10" 
+                                                         AutoReverse="True" 
+                                                         RepeatBehavior="Forever"/>
+                                    </Storyboard>
+                                </Ellipse.Resources>
+
+                                <Ellipse.Triggers>
+                                    <EventTrigger RoutedEvent="Border.Loaded">
+                                        <BeginStoryboard Storyboard="{StaticResource FlameEffect}"/>
+                                    </EventTrigger>
+                                </Ellipse.Triggers>
+
+                            </Ellipse>
+                            <TextBlock HorizontalAlignment="Left"
+                            Margin="20 0 0 0"
+                            VerticalAlignment="Center"
+                            Foreground="{TemplateBinding Foreground}"
+                            FontSize="{TemplateBinding FontSize}"
+                            FontFamily="{TemplateBinding FontFamily}"
+                            Text="{TemplateBinding Content}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource green-greyLight}"/>
+                            <Setter TargetName="dopBorder" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>

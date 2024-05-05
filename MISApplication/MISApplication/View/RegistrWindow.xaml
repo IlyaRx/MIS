@@ -3,10 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
         xmlns:local="clr-namespace:MISApplication.View"
         WindowState="Maximized" WindowStyle="None" ResizeMode="CanResizeWithGrip"
-        Height="1024" Width="1440"
+        Height="900" Width="1440"
         Title="Регистратура">
     <Grid>
         <Grid.RowDefinitions>
@@ -15,29 +14,60 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        
+
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="334"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+
+            <!--#regionфон-->
+            <Canvas Grid.Column="0"
+                    Background="{StaticResource beigeLight}">
+                <Ellipse Canvas.Left="-150" 
+                         Canvas.Top="500"
+                         Width="400" 
+                         Height="400" 
+                         Stroke="{StaticResource beigeDark}"
+                         StrokeThickness ="50"
+                         Panel.ZIndex="0"/>
+                <Ellipse Canvas.Left="217" 
+                         Canvas.Top="287"
+                         Width="299" 
+                         Height="299" 
+                         Stroke="{StaticResource beigeDark}"
+                         StrokeThickness ="30"
+                         Panel.ZIndex="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Ellipse Canvas.Left="-67" 
+                         Canvas.Top="251"
+                         Width="117" 
+                         Height="117" 
+                         Fill="{StaticResource beigeDark}"
+                         StrokeThickness ="30"
+                         Panel.ZIndex="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            </Canvas>
+            <!--#endregion-->
+
+            <ContentControl x:Name="content" Grid.Column="1">
+                <local:UsersPage/>
+            </ContentControl>
+
             <StackPanel Grid.Column="0"
-                        Background="{StaticResource beigeLight}">
+                        Background="Transparent">
                 <RadioButton Content="Запись пациента"
                              Style="{StaticResource radButMain}"
-                             IsChecked="True"/>
-                <RadioButton Content="Госпитализация"
-                             Style="{StaticResource radButMain}"/>
+                             IsChecked="True" 
+                             Checked="RadioButton_Checked"/>
                 <RadioButton Content="Регистрация ЭМК"
-                             Style="{StaticResource radButMain}"/>
+                             Style="{StaticResource radButMain}" 
+                             Checked="RadioButton_Checked_1"/>
             </StackPanel>
-            
-            
-            <Grid Grid.Column="1"/>
+
+
         </Grid>
 
-        
-        
+
+
         <!--#region шапка-->
         <Grid Grid.Row="1">
             <Grid.Background>
@@ -59,10 +89,17 @@
                     </VisualBrush>
                 </Ellipse.Fill>
             </Ellipse>
+            
+            <TextBlock x:Name="titleReg"
+                       Style="{StaticResource textBlockGreenTitle}" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="Запись пациента"
+                       FontSize="40"/>
         </Grid>
         <!--#endregion-->
-        
-        
+
+
         <local:Hed Grid.Row="0"/>
     </Grid>
 
