@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\
 MISApplication
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\App.xaml
+C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\App.xaml
 2733381842
 
 39971974207
-238-136305053
+238-1019584930
 Styles\Border.xaml;Styles\Button.xaml;Styles\Color.xaml;Styles\ComboBox.xaml;Styles\DatePicker.xaml;Styles\DictionaryStyle.xaml;Styles\RadioButton.xaml;Styles\TextBlock.xaml;Styles\TextBox.xaml;View\AdministationWindow.xaml;View\Diagnostic.xaml;View\DiagnosticPage.xaml;View\DoctorWindow.xaml;View\Hed.xaml;View\HisrtoryPasientPage.xaml;View\HistiryPasiena.xaml;View\HospitalisationPage.xaml;View\ItemListPasient.xaml;View\MainWindow.xaml;View\PoiskPasientPage.xaml;View\PriemPage.xaml;View\RedisterUserPage.xaml;View\RegisrtEMKPage.xaml;View\RegistrWindow.xaml;View\Users.xaml;View\UsersPage.xaml;View\ZapisPage.xaml;
 
 False

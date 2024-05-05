@@ -64,7 +64,7 @@
                             <RowDefinition Height="30"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Grid Margin="10 5 0 0">
+                        <Grid Margin="10 5 10 0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>
                                 <ColumnDefinition Width="*"/>
@@ -78,16 +78,13 @@
                             <TextBlock Grid.Column="3" Text="Отчество" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
                             <TextBlock Grid.Column="4" Text="Паспорт" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
                         </Grid>
-                        <ListBox HorizontalContentAlignment="Stretch"
-                                     Background="Transparent"
-                                     Margin="5"
-                                     Grid.Row="1"
-                                     BorderThickness="0">
-                            <local:ItemListPasient/>
-                            <local:ItemListPasient/>
-                            <local:ItemListPasient/>
-                            <local:ItemListPasient/>
-                            <local:ItemListPasient/>
+                        <ListBox x:Name="listPasient"
+                                 HorizontalContentAlignment="Stretch"
+                                 Background="Transparent"
+                                 Margin="5"
+                                 Grid.Row="1"
+                                 BorderThickness="0" 
+                                 SelectionChanged="listPasient_SelectionChanged">
                         </ListBox>
                     </Grid>
 
@@ -148,7 +145,7 @@
                     <Button Grid.Row="2"
                             Style="{StaticResource butFormBrown}"
                             Margin="30 15 30 15"
-                            Content="Выбрать"/>
+                            Content="Выбрать" Click="Button_Click"/>
                 </Grid>
 
             </Grid>

@@ -24,5 +24,15 @@ namespace MISApplication.View
         {
             InitializeComponent();
         }
+
+        private void listPasient_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+        }
     }
 }

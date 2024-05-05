@@ -35,7 +35,7 @@ namespace MISApplication.View
         {
             try
             {
-                Window OpenWindow = new RegistrWindow();
+                Window OpenWindow = new DoctorWindow();
                 OpenWindow.Show();
                 this.Close();
                 return;

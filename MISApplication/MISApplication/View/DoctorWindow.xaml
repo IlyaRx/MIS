@@ -47,28 +47,42 @@
                      Panel.ZIndex="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Canvas>
             <!--#endregion-->
-
-            <ContentControl x:Name="content" Grid.Column="1">
-                <local:DiagnosticPage/>
-            </ContentControl>
+            <Grid Background="White"  Grid.Column="1">
+                <Button x:Name="butStart"
+                        Style="{StaticResource butFormBrown}"
+                        Content="Начать"
+                        Click="butStart_Click"/>
+                <ContentControl x:Name="content"/>
+            </Grid>
 
             <StackPanel Grid.Column="0"
                     Background="Transparent">
-                <RadioButton Content="Приём"
+                <RadioButton x:Name="PriemRB"
+                             Content="Приём"
                              Style="{StaticResource radButMain}"
-                             IsChecked="True"/>
-                <RadioButton Content="История болезни"
-                             Style="{StaticResource radButMain}"/>
-                <RadioButton Content="Анализы"
-                             Style="{StaticResource radButMain}"/>
-                <RadioButton Content="Госпитализация"
-                             Style="{StaticResource radButMain}"/>
+                             IsChecked="True" 
+                             Checked="PriemRB_Checked"/>
+                <RadioButton x:Name="HistoryRB"
+                             Content="История болезни"
+                             Style="{StaticResource radButMain}" 
+                             Checked="HistoryRB_Checked"/>
+                <RadioButton x:Name="DiagnosticRB"
+                             Content="Анализы"
+                             Style="{StaticResource radButMain}" 
+                             Checked="DiagnosticRB_Checked"/>
+                <RadioButton x:Name="HospitalRB"
+                             Content="Госпитализация"
+                             Style="{StaticResource radButMain}" 
+                             Checked="HospitalRB_Checked"/>
             </StackPanel>
-            <Button Style="{StaticResource butForm}" 
+            <Button x:Name="butSave"
+                    Style="{StaticResource butForm}" 
                     VerticalAlignment="Bottom"
                     Margin="20"
                     Height="60"
-                    Content="Сохранить"/> 
+                    Content="Сохранить" 
+                    Visibility="Hidden"
+                    Click="ButSave_Click"/> 
 
 
         </Grid>
@@ -96,11 +110,12 @@
                     </VisualBrush>
                 </Ellipse.Fill>
             </Ellipse>
-            <TextBlock Style="{StaticResource textBlockGreenTitle}" 
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Text="Запись пациента"
-                   FontSize="40"/>
+            <TextBlock x:Name="titleDoc"
+                       Style="{StaticResource textBlockGreenTitle}" 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Text="Приём"
+                       FontSize="40"/>
         </Grid>
         <!--#endregion-->
 

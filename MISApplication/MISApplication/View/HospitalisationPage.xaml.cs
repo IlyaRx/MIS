@@ -24,5 +24,10 @@ namespace MISApplication.View
         {
             InitializeComponent();
         }
+
+        private void listPasient_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

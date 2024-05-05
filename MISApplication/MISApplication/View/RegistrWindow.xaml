@@ -48,9 +48,7 @@
             </Canvas>
             <!--#endregion-->
 
-            <ContentControl x:Name="content" Grid.Column="1">
-                <local:UsersPage/>
-            </ContentControl>
+            <ContentControl x:Name="content" Grid.Column="1"/>
 
             <StackPanel Grid.Column="0"
                         Background="Transparent">
