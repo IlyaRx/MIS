@@ -143,14 +143,14 @@
                             <TextBlock Grid.Column="3" Text="Отчество" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
                             <TextBlock Grid.Column="4" Text="Паспорт" Style="{StaticResource textBlockForm}" Margin="10 0 0 0 "/>
                         </Grid>
-                        <ListBox x:Name="listPasient"
+                        <ListView x:Name="listPasient"
                                  HorizontalContentAlignment="Stretch"
                                  Background="Transparent"
                                  Margin="5"
                                  Grid.Row="1"
                                  BorderThickness="0" 
                                  SelectionChanged="listPasient_SelectionChanged">
-                        </ListBox>
+                        </ListView>
                     </Grid>
 
                 </Border>
@@ -184,7 +184,7 @@
                                     Margin="10 10 10 0"
                                     Style="{StaticResource textBlockGreenTitle}"/>
                         <RadioButton x:Name="OrderBy"
-                                     Content="Возростанию"
+                                     Content="Возрастанию"
                                      Margin="10 0 10 3"
                                      IsChecked="True"
                                      Style="{StaticResource radioButtonFiltr}"/>
@@ -218,7 +218,7 @@
                                      Margin="10 3 10 3"
                                      Style="{StaticResource radioButtonFiltr}"/>
                         <RadioButton x:Name="RadButSave"
-                                     Content="Номер Стаховки"
+                                     Content="Номер страховки"
                                      Margin="10 3 10 5"
                                      Style="{StaticResource radioButtonFiltr}"/>
 

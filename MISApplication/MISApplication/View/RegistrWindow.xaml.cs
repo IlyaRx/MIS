@@ -17,9 +17,9 @@ namespace MISApplication.View
     /// <summary>
     /// Логика взаимодействия для WindowRegistr.xaml
     /// </summary>
-    public partial class RegistrWindow : Window
+    public partial class RegisterWindow : Window
     {
-        public RegistrWindow()
+        public RegisterWindow()
         {
             InitializeComponent();
             content.Content = new ZapisPage();
@@ -27,16 +27,18 @@ namespace MISApplication.View
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            if(titleReg != null)
-                titleReg.Text = "Запись пациента";
+            if (titleReg == null || content == null)
+                return;
+            titleReg.Text = "Запись пациента";
             content.Content = new ZapisPage();
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
-            if (titleReg != null)
-                titleReg.Text = "Регистрация новгй\nэлектронной медицинской карты";
-            content.Content = new RegisrtEMKPage();
+            if (titleReg == null || content == null)
+                return;
+            titleReg.Text = "Регистрация новой\nэлектронной медицинской карты";
+            content.Content = new RegisterUserPage();
         }
     }
 }

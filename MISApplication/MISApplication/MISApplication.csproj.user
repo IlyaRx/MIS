@@ -99,9 +99,6 @@
     <Page Update="View\Hed.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Styles\DictionaryStyle.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\HisrtoryPasientPage.xaml">
       <SubType>Designer</SubType>
     </Page>

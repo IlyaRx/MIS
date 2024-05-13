@@ -69,7 +69,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="border" Property="Background" Value="{StaticResource green-greyLight}"/>
-                            <Setter TargetName="border" Property="BorderThickness" Value="0 1 1 1"/>
+                            <!--<Setter TargetName="border" Property="BorderThickness" Value="0 1 1 1"/>-->
                             <Setter TargetName="dopBorder" Property="Visibility" Value="Visible"/>
                         </Trigger>
                     </ControlTemplate.Triggers>

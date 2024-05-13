@@ -11,15 +11,12 @@
             <GradientStop Color="#EDFFFA" Offset="0.0"/>
         </LinearGradientBrush>
     </UserControl.Background>
-    <ListView  HorizontalContentAlignment="Stretch"
-               Background="Transparent"
-               Margin="5"
-               Grid.Row="1"
-               BorderThickness="0">
-        <local:Diagnostic/>
-        <local:Diagnostic/>
-        <local:Diagnostic/>
-        <local:Diagnostic/>
-        <local:Diagnostic/>
-    </ListView>
+    <ListBox   x:Name="listPasient"
+           HorizontalContentAlignment="Stretch"
+           Background="Transparent"
+           Margin="5"
+           Grid.Row="1"
+           BorderThickness="0"
+           SelectionMode="Single">
+    </ListBox>
 </UserControl>

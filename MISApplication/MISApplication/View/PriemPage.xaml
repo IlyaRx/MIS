@@ -24,13 +24,16 @@
                 Grid.Column="0"
                 Style="{StaticResource bord}"
                 Margin="10">
+            
+            
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <TextBlock Text="Результаты" 
                            Style="{StaticResource textBlockGreenTitle}"
                            HorizontalAlignment="Left"
                            Margin="20 20 20 10"/>
-                <TextBox Margin="20 0 20 0"
+                <TextBox x:Name="Resultat"
+                         Margin="20 0 20 0"
                          Style="{StaticResource TextBoxGreenMulti}"
                          Tag="Результаты"
                          Height="200"/>
@@ -45,7 +48,8 @@
                            Style="{StaticResource textBlockGreenTitle}"
                            HorizontalAlignment="Left"
                            Margin="20 0 20 10"/>
-                <TextBox Margin="20 0 20 20"
+                <TextBox x:Name="Jalob"
+                         Margin="20 0 20 20"
                          Style="{StaticResource TextBoxGreenMulti}"
                          Tag="Жалобы"
                          Height="200"/>
@@ -58,13 +62,16 @@
                 Grid.Column="1"
                 Style="{StaticResource bord}"
                 Margin="10">
+            
+            
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
                 <TextBlock Text="Курс лечения" 
                            Style="{StaticResource textBlockGreenTitle}"
                            HorizontalAlignment="Left"
                            Margin="20 10 20 10"/>
-                <TextBox Margin="20 0 20 0"
+                <TextBox x:Name="CoursHeal"
+                         Margin="20 0 20 0"
                          Style="{StaticResource TextBoxGreenMulti}"
                          Tag="Курс лечения"
                          Height="200"/>
@@ -79,7 +86,8 @@
                            Style="{StaticResource textBlockGreenTitle}"
                            HorizontalAlignment="Left"
                            Margin="20 0 20 10"/>
-                <TextBox Margin="20 0 20 20"
+                <TextBox x:Name="Naznach"
+                         Margin="20 0 20 20"
                          Style="{StaticResource TextBoxGreenMulti}"
                          Tag="Назначение"
                          Height="200"/>

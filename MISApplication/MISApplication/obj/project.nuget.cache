@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MvrBt8KchyM5gyQoIv8gU/A5BJEvUZ41PZIO8oTopXQjWXEYP8XtPtP0nwgv2mTr4e0v8w446M6yKWUosmip9g==",
+  "dgSpecHash": "M/FfKP3hkp/5BAQIB/cFsH/vBQM9QDOOuggDgPpVTD+fAUVQlCS+oOqtLu6pQZL3mfyV6/8+Zd2/JFtWIpMHAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ilyac\\Desktop\\Git\\MISApplication\\MISApplication\\MISApplication\\MISApplication.csproj",
+  "projectFilePath": "C:\\Users\\ilyac\\OneDrive\\Документы\\GitHub\\MISApplication\\MISApplication\\MISApplication\\MISApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ilyac\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ilyac\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

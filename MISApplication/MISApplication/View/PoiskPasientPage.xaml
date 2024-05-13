@@ -37,20 +37,22 @@
                 <RowDefinition Height="80"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
-            <TextBox Height="47" Margin="10 20 150 0"
+
+            <TextBox x:Name="Poisk"
+                     Height="47" Margin="10 20 150 0"
                      VerticalAlignment="Top"
                      Tag="Поиск"
                      Style="{StaticResource TextBoxGreen}"/>
             
             
-            <Button Style="{StaticResource butForm}"
+            <Button x:Name="ButPoisk"
+                    Style="{StaticResource butForm}"
                     Content="Поиск "
                     Width="120" Height="44"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Right"
-                    Margin="0 23 15 0"
-            />
+                    Margin="0 23 15 0" Click="ButPoisk_Click"/>
+            
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
@@ -83,8 +85,7 @@
                                  Background="Transparent"
                                  Margin="5"
                                  Grid.Row="1"
-                                 BorderThickness="0" 
-                                 SelectionChanged="listPasient_SelectionChanged">
+                                 BorderThickness="0">
                         </ListBox>
                     </Grid>
 
@@ -103,15 +104,16 @@
                     Style="{StaticResource bord}">
                         <StackPanel>
                             <TextBlock Text="Отсортировать по:"
-                                Margin="10 10 10 0"
-                                Style="{StaticResource textBlockGreenTitle}"/>
-                            <RadioButton Content="Возростанию"
-                                 Margin="10 0 10 3"
-                                 IsChecked="True"
-                                 Style="{StaticResource radioButtonFiltr}"/>
-                            <RadioButton Content="Убыванию"
-                                 Margin="10 0 10 3"
-                                 Style="{StaticResource radioButtonFiltr}"/>
+                                        Margin="10 10 10 0"
+                                        Style="{StaticResource textBlockGreenTitle}"/>
+                            <RadioButton Content="Возрастанию"
+                                         Margin="10 0 10 3"
+                                         IsChecked="True"
+                                         Style="{StaticResource radioButtonFiltr}"/>
+                            <RadioButton x:Name="OrderByR" 
+                                         Content="Убыванию"
+                                         Margin="10 0 10 3"
+                                         Style="{StaticResource radioButtonFiltr}"/>
                         </StackPanel>
 
                     </Border>
@@ -125,19 +127,23 @@
                                Margin="0 10 0 0"
                                    Style="{StaticResource textBlockGreenTitle}"/>
 
-                            <RadioButton Content="ФИО"
-                                 Margin="10 0 10 3"
-                                 IsChecked="True"
-                                 Style="{StaticResource radioButtonFiltr}"/>
-                            <RadioButton Content="СНИЛС"
-                                 Margin="10 3 10 3"
-                                 Style="{StaticResource radioButtonFiltr}"/>
-                            <RadioButton Content="Паспот"
-                                 Margin="10 3 10 3"
-                                 Style="{StaticResource radioButtonFiltr}"/>
-                            <RadioButton Content="Номер Стаховки"
-                                 Margin="10 3 10 5"
-                                 Style="{StaticResource radioButtonFiltr}"/>
+                            <RadioButton x:Name="RadButFIO" 
+                                         Content="ФИО"
+                                         Margin="10 0 10 3"
+                                         IsChecked="True"
+                                         Style="{StaticResource radioButtonFiltr}"/>
+                            <RadioButton x:Name="RadButCNILS" 
+                                         Content="СНИЛС"
+                                         Margin="10 3 10 3"
+                                         Style="{StaticResource radioButtonFiltr}"/>
+                            <RadioButton x:Name="RadButPasport" 
+                                         Content="Паспот"
+                                         Margin="10 3 10 3"
+                                         Style="{StaticResource radioButtonFiltr}"/>
+                            <RadioButton x:Name="RadButSave" 
+                                         Content="Номер страховки"
+                                         Margin="10 3 10 5"
+                                         Style="{StaticResource radioButtonFiltr}"/>
 
                         </StackPanel>
 
@@ -145,7 +151,7 @@
                     <Button Grid.Row="2"
                             Style="{StaticResource butFormBrown}"
                             Margin="30 15 30 15"
-                            Content="Выбрать" Click="Button_Click"/>
+                            Content="Выбрать" Click="ButtonSelect_Click"/>
                 </Grid>
 
             </Grid>

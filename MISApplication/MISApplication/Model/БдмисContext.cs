@@ -150,7 +150,9 @@ public partial class БдмисContext : DbContext
             entity.Property(e => e.Название)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-            entity.Property(e => e.Результаты).HasMaxLength(50);
+            entity.Property(e => e.Результаты)
+                .HasMaxLength(200)
+                .IsUnicode(false);
 
             entity.HasOne(d => d.IdпациентаNavigation).WithMany(p => p.Диагностикаs)
                 .HasForeignKey(d => d.Idпациента)

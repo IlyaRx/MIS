@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using MISApplication.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,35 @@ namespace MISApplication.View
     /// </summary>
     public partial class DiagnosticPage : UserControl
     {
-        public DiagnosticPage()
+        private int _idPasient;
+        public DiagnosticPage(int idPasient)
         {
             InitializeComponent();
+            _idPasient = idPasient;
+            FillingList();
+        }
+
+        private void FillingList(List<Диагностика>? diagnosList = null)
+        {
+            listPasient.Items.Clear();
+            try
+            {
+                using (var db = new БдмисContext())
+                {
+                    if (diagnosList == null)
+                        diagnosList = db.Диагностикаs.Where(o => o.Idпациента == _idPasient).ToList();
+                    foreach (var item in diagnosList)
+                    {
+                        listPasient.Items.Add(new Diagnostic(item));
+                    }
+
+                    if (diagnosList.Count == 0)
+                        return;
+                }
+            }
+            catch{
+                MessageBox.Show("Произошла ошибка");
+            }
         }
     }
 }

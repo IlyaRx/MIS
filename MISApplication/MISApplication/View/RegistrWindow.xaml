@@ -1,4 +1,4 @@
-﻿<Window x:Class="MISApplication.View.RegistrWindow"
+﻿<Window x:Class="MISApplication.View.RegisterWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -22,44 +22,45 @@
             </Grid.ColumnDefinitions>
 
             <!--#regionфон-->
-            <Canvas Grid.Column="0"
-                    Background="{StaticResource beigeLight}">
-                <Ellipse Canvas.Left="-150" 
-                         Canvas.Top="500"
-                         Width="400" 
-                         Height="400" 
-                         Stroke="{StaticResource beigeDark}"
-                         StrokeThickness ="50"
-                         Panel.ZIndex="0"/>
-                <Ellipse Canvas.Left="217" 
-                         Canvas.Top="287"
-                         Width="299" 
-                         Height="299" 
-                         Stroke="{StaticResource beigeDark}"
-                         StrokeThickness ="30"
-                         Panel.ZIndex="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Ellipse Canvas.Left="-67" 
-                         Canvas.Top="251"
-                         Width="117" 
-                         Height="117" 
-                         Fill="{StaticResource beigeDark}"
-                         StrokeThickness ="30"
-                         Panel.ZIndex="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            </Canvas>
+            <Grid Grid.Column="0">
+                <Grid.Effect>
+                    <DropShadowEffect Opacity="0.4" Color="LightGray" Direction="0"/>
+                </Grid.Effect>
+
+                <Canvas 
+    Background="{StaticResource beigeLight}">
+                    <Ellipse Canvas.Left="-101" 
+                 Canvas.Top="437"
+                 Width="400" 
+                 Height="400" 
+                 Stroke="{StaticResource beigeDark}"
+                 StrokeThickness ="50"
+                 Panel.ZIndex="0"/>
+                    <Ellipse Canvas.Left="-67" 
+                 Canvas.Top="251"
+                 Width="117" 
+                 Height="117" 
+                 Fill="{StaticResource beigeDark}"
+                 StrokeThickness ="30"
+                 Panel.ZIndex="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </Canvas>
+
+                <StackPanel Grid.Column="0"
+                            Background="Transparent">
+                    <RadioButton Content="Запись пациента"
+                                 Style="{StaticResource radButMain}"
+                                 IsChecked="True" 
+                                 Checked="RadioButton_Checked"/>
+                    <RadioButton Content="Регистрация ЭМК"
+                                 Style="{StaticResource radButMain}" 
+                                 Checked="RadioButton_Checked_1"/>
+                </StackPanel>
+            </Grid>
             <!--#endregion-->
 
             <ContentControl x:Name="content" Grid.Column="1"/>
 
-            <StackPanel Grid.Column="0"
-                        Background="Transparent">
-                <RadioButton Content="Запись пациента"
-                             Style="{StaticResource radButMain}"
-                             IsChecked="True" 
-                             Checked="RadioButton_Checked"/>
-                <RadioButton Content="Регистрация ЭМК"
-                             Style="{StaticResource radButMain}" 
-                             Checked="RadioButton_Checked_1"/>
-            </StackPanel>
+            
 
 
         </Grid>

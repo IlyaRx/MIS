@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MISApplication.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,14 @@ namespace MISApplication.View
     /// </summary>
     public partial class Diagnostic : UserControl
     {
-        public Diagnostic()
+        private Диагностика _diagnostic;
+        public Diagnostic(Диагностика diagnostic)
         {
             InitializeComponent();
+            _diagnostic = diagnostic;
+            NameDiagnostic.Text = diagnostic.Название;
+            DateDiagnostic.Text = diagnostic.ДатаСдачи.ToString("D");
+            ResultDiagnostic.Text = diagnostic.Результаты;
         }
     }
 }

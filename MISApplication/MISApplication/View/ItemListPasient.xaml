@@ -20,7 +20,7 @@
                 <TextBlock x:Name="Id" Grid.Column="0" Text="1" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
                 <TextBlock x:Name="Lastname" Grid.Column="1" Text="Куликов" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
                 <TextBlock x:Name="Name" Grid.Column="2" Text="Илья" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
-                <TextBlock x:Name="SecondName" Grid.Column="3" Text="Александровичь" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
+                <TextBlock x:Name="SecondName" Grid.Column="3" Text="Александрович" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
                 <TextBlock x:Name="Pasport" Grid.Column="4" Text="** ** ****32" Style="{StaticResource textBlockForm}" Margin="10 0 0 0"/>
             </Grid>
         </Border>

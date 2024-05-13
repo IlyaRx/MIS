@@ -34,15 +34,18 @@
                                Text="ФИО"
                                Margin="10 7 10 0"/>
                     
-                    <TextBox Style="{StaticResource TextBoxGreen}"
+                    <TextBox x:Name="Lastname"
+                             Style="{StaticResource TextBoxGreen}"
                              Tag="Фамилия"
                              Margin="0 7 0 5"
                              Height="44"/>
-                    <TextBox Style="{StaticResource TextBoxGreen}"
+                    <TextBox x:Name="Name"
+                             Style="{StaticResource TextBoxGreen}"
                              Tag="Имя"
                              Margin="0 7 0 5"
                              Height="44"/>
-                    <TextBox Style="{StaticResource TextBoxGreen}"
+                    <TextBox x:Name="SecondName"
+                             Style="{StaticResource TextBoxGreen}"
                              Tag="Отчество"
                              Margin="0 7 0 5"
                              Height="44"/>
@@ -56,15 +59,18 @@
                                Text="Страховка"
                                Margin="10 7 10 0"/>
 
-                    <TextBox Style="{StaticResource TextBoxGreen}"
+                    <TextBox  x:Name="NumberStrahovki"
+                              Style="{StaticResource TextBoxGreen}"
                              Tag="Номер страховки"
                              Margin="0 7 0 5"
                              Height="44"/>
-                    <TextBox Style="{StaticResource TextBoxGreen}"
+                    <TextBox x:Name="CompanyStrahovki"
+                             Style="{StaticResource TextBoxGreen}"
                              Tag="Страховая компания"
                              Margin="0 7 0 5"
                              Height="44"/>
-                    <DatePicker Style="{StaticResource datePiker}"
+                    <DatePicker x:Name="DateEndStrahovka"
+                                Style="{StaticResource datePiker}"
                                 CalendarStyle="{StaticResource datePikerCalendar}"
                                 Tag="Дата окончания"
                                 Margin="0 7 0 5"
@@ -90,36 +96,43 @@
                                Text="Персональные данные"
                                Margin="0 5 0 0"/>
 
-                
-                    <TextBox Style="{StaticResource TextBoxGreen}"
+
+                    <TextBox x:Name="Adress"
+                             Style="{StaticResource TextBoxGreen}"
                              Tag="Адрес проживания"
                              Margin="0 5 0 5"
                              Height="44"/>
-                    <TextBox Style="{StaticResource TextBoxGreen}"
+                    <TextBox x:Name="NumberPhone"
+                             Style="{StaticResource TextBoxGreen}"
                              Tag="Номер телефона"
                              Margin="0 5 0 5"
                              Height="44"/>
-                    <TextBox Style="{StaticResource TextBoxGreen}"
+                    <TextBox x:Name="Pasport"
+                             Style="{StaticResource TextBoxGreen}"
                              Tag="Паспорт"
                              Margin="0 5 0 5"
                              Height="44"/>
-                    <TextBox Style="{StaticResource TextBoxGreen}"
+                    <TextBox x:Name="Snils"
+                             Style="{StaticResource TextBoxGreen}"
                              Tag="СНИЛС"
                              Margin="0 5 0 5"
                              Height="44"/>
-                    <TextBox Style="{StaticResource TextBoxGreen}"
+                    <TextBox x:Name="Mail"
+                             Style="{StaticResource TextBoxGreen}"
                              Tag="Почта"
                              Margin="0 5 0 5"
                              Height="44"/>
-                    <ComboBox Style="{StaticResource ComoBoxPoisk}"
-                             Tag="Пол"
-                             Margin="0 5 0 5"
-                             Height="44">
+                    <ComboBox x:Name="Gender"
+                              Style="{StaticResource ComoBoxPoisk}"
+                              Tag="Пол"
+                              Margin="0 5 0 5"
+                              Height="44">
                         <TextBlock Style="{StaticResource textBlockForm}" Text="Мужской"/>
                         <TextBlock Style="{StaticResource textBlockForm}" Text="Женский"/>
                     </ComboBox>
 
-                    <DatePicker Style="{StaticResource datePiker}"
+                    <DatePicker x:Name="DateBirth"
+                                Style="{StaticResource datePiker}"
                                 CalendarStyle="{StaticResource datePikerCalendar}"
                                 Tag="Дата рождениня"
                                 Margin="0 5 0 5"
@@ -128,10 +141,11 @@
                 </StackPanel>
             </Border>
 
-            <Button Style="{StaticResource butForm}"
+            <Button x:Name="ButSave"
+                    Style="{StaticResource butForm}"
                     Content="Сохранить"
                     Margin="20"
-                    Grid.Row="2"/>
+                    Grid.Row="2" Click="ButSave_Click"/>
 
         </Grid>
     </Grid>

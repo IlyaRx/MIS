@@ -35,7 +35,7 @@ namespace MISApplication.View
         {
             try
             {
-                Window OpenWindow = new DoctorWindow();
+                Window OpenWindow = new AdministrationWindow();
                 OpenWindow.Show();
                 this.Close();
                 return;
@@ -44,11 +44,14 @@ namespace MISApplication.View
 
                     ДанныеРаботников user = db.ДанныеРаботниковs.Where(s => s.Логин == loginTextBox.Text && s.Пароль == pass.Password).FirstOrDefault();
                     if (user.IdрольNavigation.Название == "Администратор")
-                        OpenWindow = new RegistrWindow();
+                        OpenWindow = new RegisterWindow();
                     if (user.IdрольNavigation.Название == "Врач")
-                        OpenWindow = new DoctorWindow();
+                    {
+                        int idDoctor = db.Врачиs.First(i => i.IdданныеРаботника == user.Id).Id;
+                        OpenWindow = new DoctorWindow(idDoctor);
+                    }
                     if (user.IdрольNavigation.Название == "Сотрудник")
-                        OpenWindow = new RegistrWindow();
+                        OpenWindow = new RegisterWindow();
 
                 }
                 if (OpenWindow != null)

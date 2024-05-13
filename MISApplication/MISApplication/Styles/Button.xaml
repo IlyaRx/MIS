@@ -76,13 +76,9 @@
                     <Border x:Name="border"
                      BorderBrush="{StaticResource brown}"
                      BorderThickness="2"
-                     CornerRadius="10">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                <GradientStop Color="#FFD2BB" Offset="0.0"/>
-                                <GradientStop Color="#FFB3B3" Offset="1.0"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
+                     CornerRadius="10"
+                     Background="{StaticResource beigeLight}">
+
                         <Label Content="{TemplateBinding Content}"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"

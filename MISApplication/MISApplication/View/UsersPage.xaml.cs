@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using MISApplication.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,40 @@ namespace MISApplication.View
         public UsersPage()
         {
             InitializeComponent();
+            FillingList();
         }
+        private void FillingList(List<ДанныеРаботников>? rabotnics = null)
+        {
+            ListUser.Items.Clear();
+            try
+            {
+                using (var db = new БдмисContext())
+                {
+                    if (rabotnics == null)
+                        rabotnics = db.ДанныеРаботниковs.Include(d => d.IdперсональныеДанныеNavigation).ToList();
+
+                    if (rabotnics.Count == 0)
+                        return;
+                    
+                    foreach (var item in rabotnics)
+                    {
+                        string? post = null;
+                        if (db.Сотрудникиs.Where(d => d.IdданныеРаботника == item.Id).IsNullOrEmpty() &&
+                            !db.Врачиs.Where(d => d.IdданныеРаботника == item.Id).IsNullOrEmpty())
+                            post = "Врач";
+                        else if(!db.Сотрудникиs.Where(d => d.IdданныеРаботника == item.Id).IsNullOrEmpty())
+                            post = db.Сотрудникиs.Include(d => d.IdдолжностьNavigation)
+                                                 .First(d => d.IdданныеРаботника == item.Id).IdдолжностьNavigation.Название;
+
+                        if(post.IsNullOrEmpty())
+                            continue;
+
+                        ListUser.Items.Add(new Users(item.IdперсональныеДанныеNavigation, post));
+                    }
+                }
+            }
+            catch{}
+        }
+
     }
 }

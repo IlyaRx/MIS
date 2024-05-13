@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MISApplication.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,25 @@ namespace MISApplication.View
     /// </summary>
     public partial class HistiryPasiena : UserControl
     {
-        public HistiryPasiena()
+        private Приёмы _priem;
+        public HistiryPasiena(Приёмы priem, ПерсональныеДанные personalDateDoctor, Отделение отделение)
         {
             InitializeComponent();
+            Lastname.Text = personalDateDoctor.Фамилия;
+            Name.Text = personalDateDoctor.Имя;
+            SecondName.Text = personalDateDoctor.Отчество;
+            Time.Text = priem.ДатаПроведения.ToString("D");
+            Otdelenie.Text = отделение.Название;
+            _priem = priem;
         }
+
+        private void ButPriem_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new Window();
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            window.ResizeMode = ResizeMode.NoResize;
+            window.Content = new PriemPage(_priem);
+            window.ShowDialog();
+        } 
     }
 }

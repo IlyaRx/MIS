@@ -26,10 +26,10 @@ namespace MISApplication.View
         {
             InitializeComponent();
             FillingList();
-            FillingCombobox();
+            FillingComboBox();
         }
 
-        private void FillingCombobox()
+        private void FillingComboBox()
         {
             try
             {
@@ -48,33 +48,40 @@ namespace MISApplication.View
         private void FillingList(List<Пациент>? pasients = null)
         {
             listPasient.Items.Clear();
-            using (var db = new БдмисContext())
+            try
             {
-                if (pasients == null)
+                using (var db = new БдмисContext())
                 {
-                    pasients = db.Пациентs.OrderBy(o => o.IdперсональныеДанныеNavigation.Фамилия).ToList();
-                    if ((bool)OrderByR.IsChecked)
-                        pasients.Reverse();
-                }
-                foreach (var item in pasients)
-                {
-                    ПерсональныеДанные персональные = db.ПерсональныеДанныеs.First(a => a.Id == item.IdперсональныеДанные);
-                    listPasient.Items.Add(new ItemListPasient(item.Id, персональные));
-                }
+                    if (pasients == null)
+                    {
+                        pasients = db.Пациентs.OrderBy(o => o.IdперсональныеДанныеNavigation.Фамилия).ToList();
+                        if ((bool)OrderByR.IsChecked)
+                            pasients.Reverse();
+                    }
+                    foreach (var item in pasients)
+                    {
+                        ПерсональныеДанные персональные = db.ПерсональныеДанныеs.First(a => a.Id == item.IdперсональныеДанные);
+                        listPasient.Items.Add(new ItemListPasient(item.Id, персональные));
+                    }
 
-                if (pasients.Count == 0)
-                    return;
+                    if (pasients.Count == 0)
+                        return;
 
-                ПерсональныеДанные пациент = db.ПерсональныеДанныеs.First(a => a.Id == pasients[0].IdперсональныеДанные);
-                LastnameTextBlock.Text = пациент.Фамилия;
-                NameTextBlock.Text = пациент.Имя;
-                SecondNameTextBlock.Text = пациент.Отчество;
-                SnilsTextBlock.Text = пациент.Снилс;
-                PsportTextBlock.Text = пациент.Паспорт;
-                AgeTextBlock.Text = CalculateAge(пациент.ДатаРождения.ToDateTime(TimeOnly.MinValue)).ToString();
+                    ПерсональныеДанные пациент = db.ПерсональныеДанныеs.First(a => a.Id == pasients[0].IdперсональныеДанные);
+                    LastnameTextBlock.Text = пациент.Фамилия;
+                    NameTextBlock.Text = пациент.Имя;
+                    SecondNameTextBlock.Text = пациент.Отчество;
+                    SnilsTextBlock.Text = пациент.Снилс;
+                    PsportTextBlock.Text = пациент.Паспорт;
+                    AgeTextBlock.Text = CalculateAge(пациент.ДатаРождения.ToDateTime(TimeOnly.MinValue)).ToString();
 
-                listPasient.SelectedIndex = 0;
-            }   
+                    listPasient.SelectedIndex = 0;
+                }   
+            }
+            catch
+            {
+
+            }
         }
 
         private int CalculateAge(DateTime birthDate)
@@ -155,64 +162,40 @@ namespace MISApplication.View
             }
             catch (Exception ex)
             {
-                FaildValid();
+                FailedValid();
             }
         }
 
-        private void FaildValid()
+        private void FailedValid()
         {
             MessageBox.Show("Проверьте правильность введённых данных!!!");
-            ControlTemplate templateTypeUslug = TypeUslug.Template;
-            Border borderTypeUslug = (Border)templateTypeUslug.FindName("border", TypeUslug);
-            borderTypeUslug.BorderBrush = Brushes.Red;
+            List<Control> list = new List<Control>()
+                {
+                    TypeUslug, Hours, Minute, Usluga, Doctor, DateStart
+                };
 
-            ControlTemplate templateHours = Hours.Template;
-            Border borderHours = (Border)templateHours.FindName("border", Hours);
-            borderHours.BorderBrush = Brushes.Red;
-
-            ControlTemplate templateMinute = Minute.Template;
-            Border borderMinute = (Border)templateMinute.FindName("border", Minute);
-            borderMinute.BorderBrush = Brushes.Red;
-
-            ControlTemplate templateUsluga = Usluga.Template;
-            Border borderUsluga = (Border)templateUsluga.FindName("border", Usluga);
-            borderUsluga.BorderBrush = Brushes.Red;
-
-            ControlTemplate templateDoctor = Doctor.Template;
-            Border borderDoctor = (Border)templateDoctor.FindName("border", Doctor);
-            borderDoctor.BorderBrush = Brushes.Red;
-
-            ControlTemplate templateDateStart = DateStart.Template;
-            Border borderDateStart = (Border)templateDateStart.FindName("border", DateStart);
-            borderDateStart.BorderBrush = Brushes.Red;
+            foreach (var item in list)
+            {
+                ControlTemplate template = item.Template;
+                Border border = (Border)template.FindName("border", item);
+                border.BorderBrush = Brushes.Red;
+            }
         }
 
         private void PassedValid()
         {
-            MessageBox.Show("Проверьте правильность введённых данных!!!");
-            ControlTemplate templateTypeUslug = TypeUslug.Template;
-            Border borderTypeUslug = (Border)templateTypeUslug.FindName("border", TypeUslug);
-            borderTypeUslug.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#36A684"));
 
-            ControlTemplate templateHours = Hours.Template;
-            Border borderHours = (Border)templateHours.FindName("border", Hours);
-            borderHours.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#36A684"));
+            List<Control> list = new List<Control>()
+                {
+                    TypeUslug, Hours, Minute, Usluga, Doctor, DateStart
+                };
 
-            ControlTemplate templateMinute = Minute.Template;
-            Border borderMinute = (Border)templateMinute.FindName("border", Minute);
-            borderMinute.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#36A684"));
-
-            ControlTemplate templateUsluga = Usluga.Template;
-            Border borderUsluga = (Border)templateUsluga.FindName("border", Usluga);
-            borderUsluga.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#36A684"));
-
-            ControlTemplate templateDoctor = Doctor.Template;
-            Border borderDoctor = (Border)templateDoctor.FindName("border", Doctor);
-            borderDoctor.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#36A684"));
-
-            ControlTemplate templateDateStart = DateStart.Template;
-            Border borderDateStart = (Border)templateDateStart.FindName("border", DateStart);
-            borderDateStart.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#36A684"));
+            foreach (var item in list)
+            {
+                ControlTemplate template = item.Template;
+                Border border = (Border)template.FindName("border", item);
+                border.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#36A684"));
+            }
         }
 
         private void listPasient_SelectionChanged(object sender, SelectionChangedEventArgs e)

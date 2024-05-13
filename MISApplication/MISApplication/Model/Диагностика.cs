@@ -13,7 +13,7 @@ public partial class Диагностика
 
     public DateOnly ДатаСдачи { get; set; }
 
-    public byte[]? Результаты { get; set; }
+    public string? Результаты { get; set; }
 
     public virtual Пациент IdпациентаNavigation { get; set; } = null!;
 }

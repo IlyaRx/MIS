@@ -16,19 +16,19 @@
             <StackPanel Grid.Column="0"
                          VerticalAlignment="Center">
                 <TextBlock Text="Название диагностики" Style="{StaticResource textBlockForm}"/>
-                <TextBlock Text="Анализ крови" Style="{StaticResource textBlockForm}"/>
+                <TextBlock x:Name="NameDiagnostic" Text="Анализ крови" Style="{StaticResource textBlockForm}"/>
             </StackPanel>
             <StackPanel Margin="20 0 20 0"
                      Grid.Column="1"
                      VerticalAlignment="Center">
                 <TextBlock Text="Дата" Style="{StaticResource textBlockForm}"/>
-                <TextBlock Text="Время" Style="{StaticResource textBlockForm}"/>
+                <TextBlock x:Name="DateDiagnostic" Text="Время" Style="{StaticResource textBlockForm}"/>
             </StackPanel>
             <StackPanel Margin="20 0 20 0"
                      Grid.Column="2"
                      VerticalAlignment="Center">
                 <TextBlock Text="Результат" Style="{StaticResource textBlockForm}"/>
-                <TextBlock Text="Анализ крови в нориме" Style="{StaticResource textBlockForm}"/>
+                <TextBlock x:Name="ResultDiagnostic" Text="Анализ крови в нориме" Style="{StaticResource textBlockForm}"/>
             </StackPanel>
             <Button Grid.Column="3"
                  Style="{StaticResource butTop}"

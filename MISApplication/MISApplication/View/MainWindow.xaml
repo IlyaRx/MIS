@@ -18,6 +18,7 @@
             <Grid>
                 <!--Фон-->
                 <Canvas>
+
                     <Ellipse Canvas.Left="-64" 
                              Canvas.Top="-14"
                              Width="328" 
@@ -80,13 +81,15 @@
                             Canvas.Top="-28" 
                             Width="398" 
                             Height="400" 
-                            Fill="{StaticResource green-greyDark}"  />
+                            Fill="{StaticResource green-greyDark}"/>
+
 
                     <Ellipse Canvas.Left="-64" 
                             Canvas.Top="593" 
                             Width="479" 
                             Height="479" 
                             Fill="{StaticResource greenLight}" />
+
 
                     <Ellipse Canvas.Left="1450" 
                             Canvas.Top="372" 
