@@ -11,20 +11,24 @@
             <GradientStop Color="#EDFFFA" Offset="0.0"/>
         </LinearGradientBrush>
     </UserControl.Background>
-    <Grid Margin="100">
+    <Grid Margin="200">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="539*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-        
-        <Border Margin="10"
+
+            <Border Margin="10"
                 Grid.Column="0" 
                 Style="{StaticResource bord}">
                 <Grid>
@@ -105,9 +109,9 @@
                     </Grid>
                 </Grid>
 
-        </Border>
+            </Border>
 
-        <Border Grid.Column="1"
+            <Border Grid.Column="1"
                 MinWidth="300"
                 Margin="10"
                 Style="{StaticResource bord}">
@@ -135,15 +139,17 @@
 
                     </StackPanel>
                 </Grid>
-        </Border>
+            </Border>
         </Grid>
 
         <Button x:Name="ButHospital"
-                Grid.Row="2"
+                Grid.Row="1"
                 Style="{StaticResource butFormBrown}"
-                Margin="50"
+                Margin="50,50,50,50"
+                MaxHeight="50"
+                
                 Content="Госпитализировать" 
-                Click="ButHospital_Click"/>
+                Click="ButHospital_Click" Grid.ColumnSpan="2"/>
 
     </Grid>
 

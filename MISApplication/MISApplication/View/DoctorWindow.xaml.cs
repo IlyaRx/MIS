@@ -118,9 +118,19 @@ namespace MISApplication.View
 
 
             _isPatient = true;
+            butBack.Visibility = Visibility.Visible;
             butSave.Visibility = Visibility.Visible;
             PriemRB.IsChecked = true;
             content.Content = _priemPage;
+        }
+
+        private void butBack_Click(object sender, RoutedEventArgs e)
+        {
+            _mainPage = new PoiskPasientPage();
+            content.Content = _mainPage;
+            _isPatient = false;
+            butSave.Visibility = Visibility.Hidden;
+            butBack.Visibility = Visibility.Hidden;
         }
     }
 }

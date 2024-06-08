@@ -1,4 +1,5 @@
-﻿using MISApplication.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using MISApplication.Model;
 using MISApplication.View;
 using System.Text;
 using System.Windows;
@@ -35,16 +36,15 @@ namespace MISApplication.View
         {
             try
             {
-                Window OpenWindow = new AdministrationWindow();
-                OpenWindow.Show();
-                this.Close();
-                return;
+                Window OpenWindow = null;
                 using (var db = new БдмисContext())
                 {
 
-                    ДанныеРаботников user = db.ДанныеРаботниковs.Where(s => s.Логин == loginTextBox.Text && s.Пароль == pass.Password).FirstOrDefault();
+                    ДанныеРаботников user = db.ДанныеРаботниковs.Include(a => a.IdрольNavigation)
+                                                                .Where(s => s.Логин == loginTextBox.Text && s.Пароль == pass.Password)
+                                                                .FirstOrDefault();
                     if (user.IdрольNavigation.Название == "Администратор")
-                        OpenWindow = new RegisterWindow();
+                        OpenWindow = new AdministrationWindow();
                     if (user.IdрольNavigation.Название == "Врач")
                     {
                         int idDoctor = db.Врачиs.First(i => i.IdданныеРаботника == user.Id).Id;

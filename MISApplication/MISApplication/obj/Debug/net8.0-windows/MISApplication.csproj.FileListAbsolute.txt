@@ -19,7 +19,6 @@ C:\Users\ilyac\your-project\MISApplication\MISApplication\MISApplication\obj\Deb
 C:\Users\ilyac\your-project\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\MISApplication.pdb
 C:\Users\ilyac\your-project\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\MISApplication.genruntimeconfig.cache
 C:\Users\ilyac\your-project\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\ref\MISApplication.dll
-C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\Styles\DictionaryStyle.baml
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\MISApplication_MarkupCompile.cache
 C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\obj\Debug\net8.0-windows\MISApplication.g.resources

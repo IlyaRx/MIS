@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.VisualBasic.ApplicationServices;
 using MISApplication.Model;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,7 @@ namespace MISApplication.View
                 using (var db = new БдмисContext())
                 {
                     if (rabotnics == null)
-                        rabotnics = db.ДанныеРаботниковs.Include(d => d.IdперсональныеДанныеNavigation).ToList();
+                        rabotnics = db.ДанныеРаботниковs.Include(d => d.IdперсональныеДанныеNavigation).OrderBy(a => a.IdперсональныеДанныеNavigation.Фамилия).ToList();
 
                     if (rabotnics.Count == 0)
                         return;
@@ -53,13 +54,16 @@ namespace MISApplication.View
 
                         if(post.IsNullOrEmpty())
                             continue;
-
-                        ListUser.Items.Add(new Users(item.IdперсональныеДанныеNavigation, post));
+                        Users user = new Users(item.IdперсональныеДанныеNavigation, post);
+                        user.ubdate += Update;
+                        ListUser.Items.Add(user);
                     }
                 }
             }
             catch{}
         }
+
+        private void Update(object obj) => FillingList();
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using MISApplication.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using MISApplication.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,14 @@ namespace MISApplication.View
         public RegisterUserPage()
         {
             InitializeComponent();
+            using (var db = new БдмисContext())
+            {
+                var listItem = db.Должностиs.Select(x => x.Название).ToList();
+                listItem.Add("Врач");
+                Post.ItemsSource = listItem;
+
+                Otdel.ItemsSource = db.Отделениеs.Select(x => x.Название).ToList();
+            }
         }
 
 
@@ -35,7 +44,7 @@ namespace MISApplication.View
             List<Control> list = new List<Control>()
             {
                 Lastname, Name, SecondName, NumberInsurance, CompanyInsurance, DateEndInsurance,Adress,Phone
-                ,Pasport, Snils,DateBirth, Login, Password,INN,Edication,Story,Post
+                ,Pasport, Snils, DateBirth, Login, Password, INN, Edication, Story, Post, Otdel, Email
             };
 
             foreach (var item in list)
@@ -52,7 +61,7 @@ namespace MISApplication.View
             List<Control> list = new List<Control>()
             {
                 Lastname, Name, SecondName, NumberInsurance, CompanyInsurance, DateEndInsurance,Adress,Phone
-                ,Pasport, Snils,DateBirth, Login, Password,INN,Edication,Story,Post
+                ,Pasport, Snils,DateBirth, Login, Password, INN, Edication,Story, Post, Otdel, Email
             };
 
             foreach (var item in list)
@@ -67,7 +76,6 @@ namespace MISApplication.View
         {
             try
             {
-
                 using(var db = new БдмисContext())
                 {
                     Страховки страховки = new Страховки()
@@ -102,27 +110,48 @@ namespace MISApplication.View
                         ОбразованиеИквалификация = Edication.Text,
                         ТрудоваяИстория = Story.Text,
                     };
-
                     db.ДанныеРаботниковs.Add(данныеРаботников);
 
-                    Должности должности = new Должности()
+                    if (Post.SelectedValue.ToString() != "Врач")
                     {
-                        Название = Post.SelectedValue.ToString()
-                    };
-                    db.Должностиs.Add(должности);
-
-                    Сотрудники сотрудники = new Сотрудники()
+                        Должности должности = db.Должностиs.First(a => a.Название == Post.SelectedItem.ToString());
+                        данныеРаботников.Idроль = 3;
+                        Сотрудники сотрудники = new Сотрудники()
+                        {
+                            IdданныеРаботникаNavigation = данныеРаботников,
+                            IdдолжностьNavigation = должности,
+                            
+                        };
+                        db.Сотрудникиs.Add(сотрудники);
+                    }
+                    if(Post.SelectedValue.ToString() == "Врач")
                     {
-                        IdданныеРаботникаNavigation = данныеРаботников,
-                        IdдолжностьNavigation = должности
-                    };
-                    db.Сотрудникиs.Add(сотрудники);
+                        Отделение отделение = db.Отделениеs.First(a => a.Название == Otdel.SelectedItem.ToString());
+                        данныеРаботников.Idроль = 2;
+                        Врачи врачи = new Врачи()
+                        {
+                            IdданныеРаботникаNavigation = данныеРаботников,
+                            IdотделенияNavigation = отделение
+                        };
+                        db.Врачиs.Add(врачи);
+                    }
 
                     db.SaveChanges();
                     MessageBox.Show("Вы создали добавили нового работника)");
                     PassedValid();
                 }
             }catch{ FailedValid(); }
+        }
+
+        private void Post_Selected(object sender, RoutedEventArgs e)
+        {
+            if (Post.SelectedItem.ToString() != "Врач")
+            {
+                Otdel.Visibility = Visibility.Collapsed;
+                return;
+            }
+            Otdel.Visibility = Visibility.Visible;
+            Otdel.SelectedIndex = 0;
         }
     }
 }

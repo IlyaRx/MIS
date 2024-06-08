@@ -15,7 +15,7 @@
     </UserControl.Background>
 
 
-    <Grid Margin="50 50 50 50">
+    <Grid Margin="200 100 200 200">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>

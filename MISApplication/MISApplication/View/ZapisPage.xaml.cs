@@ -80,7 +80,7 @@ namespace MISApplication.View
             }
             catch
             {
-
+                MessageBox.Show("приздец");
             }
         }
 
@@ -102,7 +102,6 @@ namespace MISApplication.View
             {
                 if (Poisk.Text == "")
                     return null;
-                
 
                 List<Пациент>? pasients = null;
                 using (var db = new БдмисContext())
@@ -149,13 +148,16 @@ namespace MISApplication.View
                     {
                         Idпациента = idPasient,
                         Idуслуги = db.Услугиs.First(s => s.Название == NameUslug).Id,
-                        Idврача = db.Врачиs.First(s => s.IdданныеРаботникаNavigation.IdперсональныеДанныеNavigation.Фамилия == LastnameDoctor).Id,
+                        Idврача = db.Врачиs.First(s => s.IdданныеРаботникаNavigation
+                                                        .IdперсональныеДанныеNavigation
+                                                        .Фамилия == LastnameDoctor).Id,
                         ДатаПроведения = DateOnly.FromDateTime((DateTime)DateStart.SelectedDate),
                         ВремяПроведения = new TimeOnly(int.Parse(Hours.Text), int.Parse(Minute.Text) )
                     };
                     db.Записьs.Add(запись);
                     db.SaveChanges();
-                    MessageBox.Show($"Вы создали запись {DateOnly.FromDateTime((DateTime)DateStart.SelectedDate).ToString()} на {new TimeOnly(int.Parse(Hours.Text), int.Parse(Minute.Text))}");
+                    MessageBox.Show($"Вы создали запись {DateOnly.FromDateTime((DateTime)DateStart.SelectedDate).ToString()} на {
+                                                         new TimeOnly(int.Parse(Hours.Text), int.Parse(Minute.Text))}");
                     PassedValid();
                 }
 

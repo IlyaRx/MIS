@@ -12,6 +12,7 @@ namespace MISApplication.View
     {
         private ПерсональныеДанные _staff;
         private string _post;
+        public event Action<object> ubdate;
         public Users(ПерсональныеДанные staff, string post)
         {
             InitializeComponent();
@@ -49,7 +50,9 @@ namespace MISApplication.View
                         }
                         db.SaveChanges();
                         System.Windows.Forms.MessageBox.Show($"Удаление завершено. Вы удалили {_staff.Имя} {_staff.Фамилия} {_staff.Отчество}");
+                        ubdate?.Invoke(this);
                     }
+
                 }catch { }
                 return;
         }

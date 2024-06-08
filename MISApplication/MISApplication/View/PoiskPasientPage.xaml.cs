@@ -58,8 +58,7 @@ namespace MISApplication.View
                 }
             }
             catch 
-            { 
-
+            {
             }
         }
 
@@ -70,18 +69,25 @@ namespace MISApplication.View
                 if (Poisk.Text == "")
                     return null;
 
-
                 List<Пациент>? pasients = null;
                 using (var db = new БдмисContext())
                 {
                     if ((bool)RadButFIO.IsChecked)
-                        pasients = db.Пациентs.Where(f => f.IdперсональныеДанныеNavigation.Фамилия == Poisk.Text).OrderBy(o => o.IdперсональныеДанныеNavigation.Фамилия).ToList();
+                        pasients = db.Пациентs.Where(f => f.IdперсональныеДанныеNavigation.Фамилия.Contains(Poisk.Text))
+                                            .OrderBy(o => o.IdперсональныеДанныеNavigation.Фамилия)
+                                            .ToList();
                     if ((bool)RadButCNILS.IsChecked)
-                        pasients = db.Пациентs.Where(f => f.IdперсональныеДанныеNavigation.Снилс == Poisk.Text).OrderBy(o => o.IdперсональныеДанныеNavigation.Фамилия).ToList();
+                        pasients = db.Пациентs.Where(f => f.IdперсональныеДанныеNavigation.Снилс.Contains(Poisk.Text))
+                                              .OrderBy(o => o.IdперсональныеДанныеNavigation.Фамилия)
+                                               .ToList();
                     if ((bool)RadButPasport.IsChecked)
-                        pasients = db.Пациентs.Where(f => f.IdперсональныеДанныеNavigation.Паспорт == Poisk.Text).OrderBy(o => o.IdперсональныеДанныеNavigation.Фамилия).ToList();
+                        pasients = db.Пациентs.Where(f => f.IdперсональныеДанныеNavigation.Паспорт.Contains(Poisk.Text))
+                                              .OrderBy(o => o.IdперсональныеДанныеNavigation.Фамилия)
+                                              .ToList();
                     if ((bool)RadButSave.IsChecked)
-                        pasients = db.Пациентs.Where(f => f.IdперсональныеДанныеNavigation.НомерСтраховогоПолиса == Poisk.Text).OrderBy(o => o.IdперсональныеДанныеNavigation.Фамилия).ToList();
+                        pasients = db.Пациентs.Where(f => f.IdперсональныеДанныеNavigation.НомерСтраховогоПолиса.Contains(Poisk.Text))
+                                              .OrderBy(o => o.IdперсональныеДанныеNavigation.Фамилия)
+                                              .ToList();
                 }
                 if ((bool)OrderByR.IsChecked)
                     pasients.Reverse();

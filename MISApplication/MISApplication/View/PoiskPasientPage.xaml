@@ -51,7 +51,8 @@
                     Width="120" Height="44"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Right"
-                    Margin="0 23 15 0" Click="ButPoisk_Click"/>
+                    Margin="0 23 15 0" Click="ButPoisk_Click"
+                    IsDefault="True"/>
             
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>

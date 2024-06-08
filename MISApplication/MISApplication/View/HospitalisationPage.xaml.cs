@@ -61,7 +61,7 @@ namespace MISApplication.View
             {
                 using (var db = new БдмисContext())
                 {
-                    CBOtdelenie.ItemsSource = db.КатегорияУслугs.Select(s => s.Название).ToList();
+                    CBOtdelenie.ItemsSource = db.Отделениеs.Select(s => s.Название).ToList();
                 }
             }
             catch (Exception ex) { }
@@ -99,7 +99,6 @@ namespace MISApplication.View
             }
         }
 
-
         private void ButHospital_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -107,9 +106,7 @@ namespace MISApplication.View
                 using(var db = new БдмисContext())
                 {
                     string nameOtdel = CBOtdelenie.SelectedItem.ToString();
-                    int idOtdel= 0;
-                    if (nameOtdel == null)
-                        idOtdel = db.Отделениеs.First(o => o.Название == nameOtdel).Id;
+                    int idOtdel = db.Отделениеs.First(o => o.Название == nameOtdel).Id;
                     Госпитализация newHospital = new Госпитализация()
                     {
                         Idотделения = idOtdel,

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MISApplication
-build_property.ProjectDir = C:\Users\ilyac\OneDrive\Документы\GitHub\MISApplication\MISApplication\MISApplication\
+build_property.ProjectDir = C:\Users\ilyac\Desktop\Git\MISApplication\MISApplication\MISApplication\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

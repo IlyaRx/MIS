@@ -169,8 +169,15 @@
                                   Style="{StaticResource ComoBoxPoisk}"
                                   Tag="Должность"
                                   Margin="0 5 0 5"
-                                  Height="44"/>
-
+                                  Height="44"
+                                  SelectionChanged="Post_Selected"/>
+                        <ComboBox x:Name="Otdel" 
+                                  Style="{StaticResource ComoBoxPoisk}"
+                                  Tag="Отделение (для врача)"
+                                  Margin="0 5 0 5"
+                                  Height="44"
+                                  Visibility="Hidden"/>
+                        
                     </StackPanel>
                 </Border>
 

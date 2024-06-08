@@ -38,7 +38,7 @@ namespace MISApplication.View
             if (titleReg == null || content == null)
                 return;
             titleReg.Text = "Регистрация новой\nэлектронной медицинской карты";
-            content.Content = new RegisterUserPage();
+            content.Content = new RegisrtEMKPage();
         }
     }
 }
